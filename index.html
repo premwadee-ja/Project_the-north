@@ -207,27 +207,33 @@
             img.src = imageList[(currentIndex + direction + imageList.length) % imageList.length];
         }
 
-        // ฟังก์ชันค้นหา
-        function searchProvince() {
-            let input = document.getElementById("search-input").value.trim().toLowerCase();
-            let provinces = ["สุโขทัย", "พิษณุโลก", "กำแพงเพชร", "พิจิตร", "อุตรดิตถ์", "ตาก", 
-                            "เพชรบูรณ์", "นครสวรรค์"];
-            
-            let match = provinces.find(province => province.includes(input));
-            if (match) {
-                alert(`เปิดข้อมูลจังหวัด: ${match}`);
-            } else {
-                alert("ไม่พบจังหวัดที่ต้องการค้นหา");
-            }
-        }
+      function searchProvince() {
+    let input = document.getElementById("search-input").value.trim();
+    let provinces = {
+        "สุโขทัย": "sukhothai.html",
+        "พิษณุโลก": "phitsanulok.html",
+        "กำแพงเพชร": "kamphaengphet.html",
+        "พิจิตร": "phichit.html",
+        "อุตรดิตถ์": "uttaradit.html",
+        "ตาก": "tak.html",
+        "เพชรบูรณ์": "phetchabun.html",
+        "นครสวรรค์": "nakhonsawan.html"
+    };
 
-        document.getElementById("search-btn").addEventListener("click", searchProvince);
-        document.getElementById("search-input").addEventListener("keypress", function(event) {
-            if (event.key === "Enter") {
-                event.preventDefault();
-                searchProvince();
-            }
-        });
+    if (provinces[input]) {
+        window.location.href = provinces[input]; // เปลี่ยนหน้าไปยังไฟล์ของจังหวัด
+    } else {
+        alert("ไม่พบข้อมูลจังหวัดที่ต้องการ");
+    }
+}
+
+document.getElementById("search-btn").addEventListener("click", searchProvince);
+document.getElementById("search-input").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        searchProvince();
+    }
+});
 
     </script>
 
