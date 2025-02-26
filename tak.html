@@ -43,12 +43,12 @@
             padding: 20px;
             text-align: center;
         }
-        .grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
+       .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    align-items: stretch; /* ทำให้การ์ดทุกอันมีความสูงเท่ากัน */
+}
         .card {
             background: white;
             border-radius: 10px;
@@ -78,6 +78,19 @@
         .card p {
             font-size: 14px;
             color: #777;
+       
+        .card {
+    min-height: 300px; /* ปรับขนาดตามที่เหมาะสม */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+        .card-content {
+    min-height: 120px;
+}
+
+        
         }
     </style>
 </head>
