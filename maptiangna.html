@@ -92,20 +92,23 @@
 <body>
    
     
-    <body>
+   <body>
     <button onclick="goBack()" class="back-button">⬅ ย้อนกลับ</button>
+
     <h2>แผนที่เถียงนา Coffee and Bakery Farm</h2>
     <div id="map"></div>
- <script>
+
+    <script>
         function goBack() {
-            if (document.referrer) {
+            if (window.history.length > 1) {
                 window.history.back(); // ถ้ามีหน้าก่อนหน้า ให้ย้อนกลับ
             } else {
-                window.location.href = "index.html"; // ถ้าไม่มีหน้าก่อนหน้า ไปหน้าแรก
+                window.location.href = "index.html"; // ถ้าไม่มีหน้าก่อนหน้า ให้ไปหน้าแรก
             }
         }
     </script>
 </body>
+
 
 
 </script>
