@@ -49,13 +49,15 @@ nav ul li a {
     gap: 20px;
     justify-content: center;
 }
-
-.card {
-    min-height: 350px; /* ปรับให้ทุกการ์ดมีขนาดเท่ากัน */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+  .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgb(129, 128, 128);
+            overflow: hidden;
+            width: 23%;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
 
 .card:hover {
     transform: scale(1.05);
