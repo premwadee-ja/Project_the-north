@@ -90,38 +90,24 @@
    </style>
 </head>
 <body>
+   
     
-    
+    <body>
+    <button onclick="goBack()" class="back-button">⬅ ย้อนกลับ</button>
     <h2>แผนที่เถียงนา Coffee and Bakery Farm</h2>
     <div id="map"></div>
-  
-<button onclick="goBack()" class="back-button">⬅ ย้อนกลับ</button>
-
-<script>
-    function goBack() {
-        if (document.referrer) {
-            // ถ้ามีหน้าก่อนหน้า ให้กลับไป
-            window.history.back();
-        } else {
-            // ถ้าไม่มีหน้าก่อนหน้า เช่น เปิดจากแท็บใหม่ ให้ไปหน้าแรก
-            window.location.href = "index.html"; // เปลี่ยนเป็น URL ของหน้าแรกของคุณ
+ <script>
+        function goBack() {
+            if (document.referrer) {
+                window.history.back(); // ถ้ามีหน้าก่อนหน้า ให้ย้อนกลับ
+            } else {
+                window.location.href = "index.html"; // ถ้าไม่มีหน้าก่อนหน้า ไปหน้าแรก
+            }
         }
-    }
-</script>
+    </script>
+</body>
 
 
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        if (document.referrer === "") {
-            document.querySelector(".back-button").onclick = function() {
-                window.location.href = "index.html";
-            };
-        } else {
-            document.querySelector(".back-button").onclick = function() {
-                window.history.back();
-            };
-        }
-    });
 </script>
 
 
