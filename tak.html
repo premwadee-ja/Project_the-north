@@ -3,53 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ข้อมูลจังหวัดตาก</title>
+    <title>ข้อมูลจังหวัด</title>
+  
     <link rel="stylesheet" href="style.css">
-   <style>
-    body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-}
-header {
-    background-color: #2c5e2e;
-    color: white;
-    padding: 15px 0;
-    text-align: center;
-    font-size: 24px;
-}
-nav {
-    background-color: #3e8e41;
-    padding: 10px 0;
-    text-align: center;
-}
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-    text-align: center;
-}
-.grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* คงที่ 4 คอลัมน์ */
-    gap: 20px;
-    justify-content: center;
-}
-  .card {
+</head>
+<body>
+   <header>
+       
+    <h1>แพลตฟอร์มดิจิทัลเพื่อส่งเสริมการท่องเที่ยวภาคเหนือตอนล่างของไทย</h1>
+    <nav>
+        <ul>
+            <li><a href="home.html">หน้าแรก</a></li>
+            <li><a href="About.html">ข้อมูลจังหวัด</a></li>
+            <li><a href="infor.html">แหล่งท่องเที่ยว</a></li>
+            <li><a href="infor.html">คาเฟ่/ร้านอาหาร</a></li>
+            <li><a href="in.html">แหล่งร้านฝากขาย</a></li>
+        
+        </ul>
+    </nav>
+    </header>
+  
+  
+  
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 32px;
+            color: hsl(0, 1%, 35%);
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::before, h2::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: #e67e22;
+            top: 50%;
+        }
+
+        h2::before {
+            left: -60px;
+        }
+
+        h2::after {
+            right: -60px;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .card {
             background: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgb(129, 128, 128);
@@ -59,161 +81,141 @@ nav ul li a {
             transition: transform 0.3s ease-in-out;
         }
 
-.card:hover {
-    transform: scale(1.05);
-}
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-.card-content {
-    padding: 15px;
-    min-height: 120px;
-}
+        .card:hover {
+            transform: scale(1.05);
+        }
 
-/* ปรับให้แสดงผลถูกต้องในหน้าจอเล็ก */
-@media (max-width: 1024px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (max-width: 768px) {
-    .grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-  </style>
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+            text-align: left;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            color: #e67e22;
+            margin: 10px 0;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>แพลตฟอร์มดิจิทัลเพื่อส่งเสริมการท่องเที่ยวภาคเหนือตอนล่างของไทย</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="home.html">หน้าแรก</a></li>
-            <li><a href="About.html">ข้อมูลจังหวัด</a></li>
-            <li><a href="infor.html">แหล่งท่องเที่ยว</a></li>
-            <li><a href="cafe.html">คาเฟ่/ร้านอาหาร</a></li>
-            <li><a href="shop.html">แหล่งร้านฝากขาย</a></li>
-        </ul>
-    </nav>
     <div class="container">
         <h2>ข้อมูลจังหวัดตาก</h2>
         <div class="grid">
             <div class="card">
-                <a href="Coffee and Bakery Farm.html">
-                    <img src="no1.jpg" alt="สถานที่ 1">
-                    <div class="card-content">
-                        <h3>ร้าน เถียงนา Coffee and Bakery Farm</h3>
-                        <p>ร้านตกแต่งสไตล์ไม้ร่มรื่น มีที่นั่งทั้งโซนแอร์และโซนข้างนอก</p>
-                    </div>
-                </a>
+                <img src="1.jpg" alt="สถานที่ 1">
+                <div class="card-content">
+                    <h3>ร้าน เถียงนา Coffee and Bakery Farm</h3>
+                    <p>ร้านจะตกแต่งสไตล์ไม้ร่มรื่น มีที่นั่งทั้งโซนแอร์และโซนข้างนอก มีที่จอดรถภายในร้าน ครัวซองต์ของที่ร้านขึ้นชื่อมากๆ ใครไปเที่ยวตากก็ต้องไป</p>
+                </div>
             </div>
             <div class="card">
-                <a href="R2.html">
-                    <img src="no2.jpg" alt="สถานที่ 2">
-                    <div class="card-content">
-                        <h3>ร้านอาหารไอยราวดี</h3>
-                        <p>ร้านอาหารบรรยากาศดีมาก บริการดี ราคาไม่แพง</p>
-                    </div>
-                </a>
+                <img src="2.jpg" alt="สถานที่ 2">
+                <div class="card-content">
+                    <h3>ร้านอาหารไอยราวดี</h3>
+                    <p>ร้านอาหารบรรยากาศดีมากี่ทีก็ชอบชอบในบรรยากาศเพลงเพราะติดแม่น้ำที่สำคัญพนักงานบริการดีราคาไม่แพงมาก</p>
+                </div>
             </div>
             <div class="card">
-                <a href="R3.html">
-                    <img src="no3.jpg" alt="สถานที่ 3">
-                    <div class="card-content">
-                        <h3>ครัวจักรกะพัทธ เมืองตาก</h3>
-                        <p>อาหารหลากหลายสไตล์ สดใหม่ บรรยากาศดี</p>
-                    </div>
-                </a>
+                <img src="3.jpg" alt="สถานที่ 3">
+                <div class="card-content">
+                    <h3>ครัวจักรกะพัทธ เมืองตาก</h3>
+                    <p>อาหารหลากหลายสไตล์​ทำสดใหม่ ไม่เคยกินเมี่ยงตาก​ ก็ได้มาลอง ร้านอาหารเช้า​ กลางวัน​ เย็น​ แบบเป็นกันเองน่ารัก</p>
+                </div>
             </div>
             <div class="card">
-                <a href="R4.html">
-                    <img src="no4.jpg" alt="สถานที่ 4">
-                    <div class="card-content">
-                        <h3>Wattana Hip</h3>
-                        <p>ร้านอาหารแนววินเทจ ตกแต่งสวย อาหารหลากหลาย</p>
-                    </div>
-                </a>
+                <img src="4.jpg" alt="สถานที่ 4">
+                <div class="card-content">
+                    <h3>Wattana Hip</h3>
+                    <p>ร้านอาหารwattana hip เน้นบรรยายกาศแนวย้อนยุคสมัยช่วง ร.6 ที่ตกแต่งบ้านแบบไม้โบราณให้สวยงามเหมาะแก่ให้นักท่องเที่ยว</p>
+              
+              </div>
             </div>
-            <div class="card">
-                <a href="Cafe5.html">
-                    <img src="no5.jpg" alt="สถานที่ 5">
-                    <div class="card-content">
-                        <h3>โรชา คาเฟ่</h3>
-                        <p>คาเฟ่บรรยากาศธรรมชาติ มีมุมถ่ายรูปเยอะ ราคาไม่แพง</p>
-                    </div>
-                </a>
-            </div>
-            <div class="card">
-                <a href="Cafe6.html">
-                    <img src="no6.jpg" alt="สถานที่ 6">
-                    <div class="card-content">
-                        <h3>ริเวอร์ บาร์ คาเฟ่</h3>
-                        <p>คาเฟ่เล็กๆ ริมน้ำปิง เหมาะสำหรับการพักผ่อน</p>
-                    </div>
-                </a>
-            </div>
-            <div class="card">
-                <a href="Cafe7.html">
-                    <img src="no7.jpg" alt="สถานที่ 7">
-                    <div class="card-content">
-                        <h3>วันเดย์ วัน คาเฟ่</h3>
-                        <p>คาเฟ่ใจกลางเมือง ใกล้ริมน้ำ บรรยากาศดี</p>
-                    </div>
-                </a>
-            </div>
-            <div class="card">
-                <a href="Cafe8.html">
-                    <img src="no8.jpg" alt="สถานที่ 8">
-                    <div class="card-content">
-                        <h3>อินนา คาเฟ่</h3>
-                        <p>ร้านกาแฟโทนสีเขียว ริมแม่น้ำปิง ตกแต่งอบอุ่น</p>
-                    </div>
-                </a>
+        </div>
+       
+
+       
+</head>
+<body>
     
-                
-              <div class="card">
-    <a href="T9.html">
-        <img src="no9.jpg" alt="สถานที่ 9">
-        <div class="card-content">
-            <h3>น้ำตกปิตุโกร</h3>
-            <p>หนึ่งในน้ำตกที่สวยที่สุดอันดับต้นๆ ของเมืองไทย</p>
-        </div>
-    </a>
-</div>
-
-<div class="card">
-    <a href="T10.html">
-        <img src="no10.jpg" alt="สถานที่ 10">
-        <div class="card-content">
-            <h3>น้ำตกทีลอซู</h3>
-            <p>น้ำตกขนาดใหญ่ในเขตรักษาพันธุ์สัตว์ป่าอุ้มผาง</p>
-        </div>
-    </a>
-</div>
-
-<div class="card">
-    <a href="T11.html">
-        <img src="no11.jpg" alt="สถานที่ 11">
-        <div class="card-content">
-            <h3>วัดพระบรมธาตุตาก</h3>
-            <p>วัดเก่าแก่ที่มีพระบรมธาตุเจดีย์ เป็นศูนย์รวมจิตใจของชาวตาก</p>
-        </div>
-    </a>
-</div>
-
+        <div class="grid">
             <div class="card">
-                <a href="T12.html">
-                    <img src="no12.jpg" alt="สถานที่ 12">
-                    <div class="card-content">
-                        <h3>ถ้ำแม่อุสุ</h3>
-                        <p>ถ้ำหินปูนขนาดใหญ่ มีลำน้ำแม่อุสุไหลลอดผ่าน</p>
-                    </div>
-                </a>
+                <img src="5.jpg" alt="สถานที่ 5">
+                <div class="card-content">
+                    <h3>โรชา คาเฟ่,ตาก</h3>
+                    <p> ล้อมไปด้วยธรรมชาติรอบด้าน บรรยากาศดีมาก บรรยากาศปลอดโปล่งโล่งสบาย มีมุมถ่ายรูปเยอะมาก ราคาเครื่องดื่มและเค้กไม่แพง</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="6.jpg" alt="สถานที่ 6">
+                <div class="card-content">
+                    <h3>ริเวอร์ บาร์ คาเฟ่,ตาก</h3>
+                    <p>เป็นคาเฟ่เล็กๆ จิบกาแฟเบาๆ ท่ามกลางบรรยากาศริมน้ำปิง</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="7.jpg" alt="สถานที่ 7">
+                <div class="card-content">
+                    <h3>วันเดย์ วันคาเฟ่,ตาก</h3>
+                    <p>เป็นคาเฟ่ที่ตั้งอยู่ใจกลางเมืองจังหวัดตาก รอบๆคาเฟ่เป็นที่นั่งพักหย่อนใจสบายๆ ใกล้ริมน้ำ บรรยากาศดี</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="8.jpg" alt="สถานที่ 8">
+                <div class="card-content">
+                    <h3>อินนา คาเฟ่,ตาก</h3>
+                    <p>ร้านกาแฟโทนสีเขียวบรรยากาศดี ริมแม่น้ำปิง ตัวร้านตกแต่งในสไตล์ยุโรป มีความอบอุ่นมากจะนั่งมุมไหนก็ดีงาม แต่ถ้าชอบความชิลๆ ก็มีมุมริมแม่น้ำปิงอีกด้วย</p>
+                </div>
             </div>
         </div>
     </div>
+
+</head>
+<body>
+    <div class="grid">
+        <div class="card">
+            <img src="9.jpg" alt="สถานที่ 9">
+            <div class="card-content">
+                <h3>น้ำตกปิตุ๊โกร</h3>
+                <p>น้ำตกปิตุ๊โกร หรือ น้ำตกเปรโต๊ะลอซู จังหวัดตาก หนึ่งในน้ำตกที่สวยที่สุดอันดับต้น ๆ ของเมืองไทย  </p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="10.jpg" alt="สถานที่ 10">
+            <div class="card-content">
+                <h3>น้ำตกทีลอซู</h3>
+                <p>เป็นน้ำตกที่ตั้งอยู่ในเขตรักษาพันธุ์สัตว์ป่าอุ้มผาง อำเภออุ้มผาง จังหวัดตาก ห่างจากที่ทำการเขตฯ 3 กิโลเมตร มีลักษณะเป็นน้ำตกภูเขาหินปูนขนาดใหญ่</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="11.jpg" alt="สถานที่ 11">
+            <div class="card-content">
+                <h3>วัดพระบรมธาตุตาก</h3>
+                <p>เป็นวัดเก่าแก่ที่มี พระบรมธาตุเจดีย์ ตั้งอยู่ภายในวัด โดยสร้างขึ้นเมื่อประมาณพุทธศตวรรษที่ 18 ในอดีตชาวบ้านจะเรียกว่า วัดพระเจ้าทันใจ </p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="12.jpg" alt="สถานที่ 12">
+            <div class="card-content">
+                <h3>ถ้ำแม่อุสุ</h3>
+                <p>เป็นถ้ำหินปูนขนาดใหญ่ที่มีลำน้ำแม่อุสุไหลลอดผ่านเข้าไป ภายในถ้ำแบ่งเป็น 3 ห้องใหญ่ แต่ละห้องมีหินงอกหินย้อยเป็นรูปต่างๆ กันไป </p>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
+
+    
+
