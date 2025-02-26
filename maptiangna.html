@@ -69,12 +69,24 @@
     transition: background 0.3s ease-in-out;
 }
 
+   .back-button {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
 .back-button:hover {
     background-color: #e0554d;
 }
 
-   
-   
    </style>
 </head>
 <body>
@@ -93,6 +105,20 @@
             window.location.href = "index.html"; // ถ้าไม่มีหน้าก่อนหน้า ให้กลับไปหน้าแรก
         }
     }
+</script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        if (document.referrer === "") {
+            document.querySelector(".back-button").onclick = function() {
+                window.location.href = "index.html";
+            };
+        } else {
+            document.querySelector(".back-button").onclick = function() {
+                window.history.back();
+            };
+        }
+    });
 </script>
 
 
