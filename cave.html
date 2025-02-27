@@ -73,6 +73,9 @@
 
   .button-container {
             margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
        .map-link, .back-link {
             display: inline-block;
@@ -83,15 +86,14 @@
             border-radius: 10px;
             font-weight: bold;
             font-size: 18px;
-            border: 3px solid #c17334; /* เพิ่มกรอบให้ทุกปุ่ม */
+            border: 3px solid #a55d29; /* กรอบสีน้ำตาล */
             cursor: pointer;
             transition: background 0.3s, transform 0.2s, border-color 0.3s;
-            margin: 0 10px;
         }
         .map-link:hover, .back-link:hover {
             background: #c17334;
             transform: scale(1.05);
-            border-color: #a55d29; /* กรอบเข้มขึ้นเมื่อโฮเวอร์ */
+            border-color: #8b4f20; /* กรอบเข้มขึ้นเมื่อโฮเวอร์ */
         }
         .map-link:active, .back-link:active {
             transform: scale(0.95);
