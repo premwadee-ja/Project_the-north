@@ -54,13 +54,59 @@
         .leaflet-routing-container .leaflet-routing-waypoint .leaflet-routing-icon {
             background-color: #ff6f61; /* เปลี่ยนสีไอคอนให้เป็นสีเด่น */
         }
+   
+     .back-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+  .back-button {
+    display: block;
+    margin: 15px auto; /* จัดให้อยู่ตรงกลาง */
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.back-button:hover {
+    background-color: #e0554d;
+}
+
     </style>
 </head>
 <body>
+   
+     <body>
+    <button onclick="goBack()" class="back-button">⬅ ย้อนกลับ</button>
     <h2>แผนที่อุทยานแห่งชาติคลองวังเจ้า</h2>
     <div id="map"></div>
     
     <script>
+        function goBack() {
+            if (window.history.length > 1) {
+                window.history.back(); // ถ้ามีหน้าก่อนหน้า ให้ย้อนกลับ
+            } else {
+                window.location.href = "canal.html"; // ถ้าไม่มีหน้าก่อนหน้า ให้ไปหน้าแรก
+            }
+        }
+    </script>
+         
+         <script>
         var map = L.map('map').setView([16.8761, 99.1456], 12); // ซูมระดับ 12 เพื่อแสดงพื้นที่กว้างขึ้น
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
