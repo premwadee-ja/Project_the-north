@@ -27,6 +27,7 @@
    <style>
       
   body {
+            body {
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
@@ -44,17 +45,25 @@
             display: inline-block;
             padding-bottom: 5px;
         }
-        .map-container {
-            display: none; /* ซ่อนแผนที่ในตอนแรก */
-            margin-top: 20px;
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 20px auto;
         }
-        iframe {
+        .image-gallery img {
             width: 100%;
-            height: 400px;
+            height: auto;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .map-link, .back-link, .close-map {
+        .text-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .map-link, .back-link {
             display: inline-block;
             margin-top: 15px;
             padding: 10px 20px;
@@ -63,14 +72,9 @@
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
-            transition: background 0.3s, transform 0.2s;
         }
-        .map-link:hover, .back-link:hover, .close-map:hover {
+        .map-link:hover, .back-link:hover {
             background: #3e663a;
-            transform: scale(1.05);
-        }
-        .map-link:active, .back-link:active, .close-map:active {
-            transform: scale(0.95);
         }
     </style>
 </head>
