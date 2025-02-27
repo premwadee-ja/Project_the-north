@@ -13,7 +13,7 @@
     <h1>แพลตฟอร์มดิจิทัลเพื่อส่งเสริมการท่องเที่ยวภาคเหนือตอนล่างของไทย</h1>
     <nav>
         <ul>
-            <li><a href="home.html">หน้าแรก</a></li>
+            <li><a href="index.html">หน้าแรก</a></li>
                <li><a href="About.html">ข้อมูลจังหวัด</a></li>
                <li><a href="infor.html">แหล่งท่องเที่ยว</a></li>
                <li><a href="cafe.html">คาเฟ่/ร้านอาหาร</a></li>
@@ -70,19 +70,32 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .map-link {
+
+.button-container {
+            margin-top: 50px;
+        }
+        .map-link, .back-link {
             display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background: #e67e22;
+            padding: 15px 30px;
+            background: #de8b42;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 10px;
             font-weight: bold;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            margin: 0 10px;
         }
-        .map-link:hover {
-            background: #FF99CC;
+        .map-link:hover, .back-link:hover {
+            background: #c17334;
+            transform: scale(1.05);
         }
+        .map-link:active, .back-link:active {
+            transform: scale(0.95);
+        }
+	   
     </style>
 </head>
 <body>
