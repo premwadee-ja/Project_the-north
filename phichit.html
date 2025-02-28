@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ข้อมูลจังหวัด</title>
+    <script src="search.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,11 +13,11 @@
     <h1>แพลตฟอร์มดิจิทัลเพื่อส่งเสริมการท่องเที่ยวภาคเหนือตอนล่างของไทย</h1>
     <nav>
         <ul>
-            <li><a href="index.html">หน้าแรก</a></li>
-            <li><a href="about.html">ข้อมูลจังหวัด</a></li>
+            <li><a href="home.html">หน้าแรก</a></li>
+            <li><a href="About.html">ข้อมูลจังหวัด</a></li>
             <li><a href="infor.html">แหล่งท่องเที่ยว</a></li>
-            <li><a href="cafe.html">คาเฟ่/ร้านอาหาร</a></li>
-            <li><a href="shop.html">แหล่งร้านฝากขาย</a></li>
+            <li><a href="infor.html">คาเฟ่/ร้านอาหาร</a></li>
+            <li><a href="in.html">แหล่งร้านฝากขาย</a></li>
         
         </ul>
     </nav>
@@ -46,7 +47,7 @@
             display: inline-block;
         }
 
-        h2:before, h2:after {
+        h2::before, h2::after {
             content: "";
             position: absolute;
             width: 50px;
@@ -55,11 +56,11 @@
             top: 50%;
         }
 
-        h2:before {
+        h2::before {
             left: -60px;
         }
 
-        h2:after {
+        h2::after {
             right: -60px;
         }
 
@@ -95,179 +96,123 @@
             text-align: left;
         }
 
-       .card h3 {
-    font-size: 16px; 
-    font-weight: bold;
-    color: #e67e22; /* สีส้ม */
-    margin-bottom: 5px;
-}
+        .card h3 {
+            font-size: 18px;
+            color: #e67e22;
+            margin: 10px 0;
+        }
 
-      .card p {
-    font-size: 14px; 
-    color: #777;
-}
-    
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* บังคับให้มี 4 คอลัมน์ต่อบรรทัด */
-    gap: 20px;
-    padding: 20px;
-}
-
-.card {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* เงาใต้การ์ด */
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card img {
-    width: 100%;
-    height: 200px; /* ปรับความสูงของรูปให้เท่ากัน */
-    object-fit: cover;
-}
-
-.card-content {
-    padding: 20px;
-    text-align: left;
-    background: white;
-}
-
-.card h3 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #e67e22; /* สีส้ม */
-    margin-bottom: 10px;
-}
-
-.card p {
-    font-size: 16px;
-    color: #777;
-}
-
+        .card p {
+            font-size: 14px;
+            color: #777;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h2>ข้อมูลจังหวัดพิจิตร</h2>
-        <div class="grid-container">
-          <a href="thai.html" class="card">
-             <img src="p1.jpg" alt="ร้านอาหารไทย ครัวปลาใหญ่">
+        <div class="grid">
+            <div class="card">
+                <img src="1.jpg" alt="สถานที่ 1">
                 <div class="card-content">
                     <h3>ร้านอาหารไทย ครัวปลาใหญ่</h3>
                     <p> เป็นร้านอาหารบรรยากาศสบายๆ  เมนูเด่นของร้านคือเหล่าเมนูจากเนื้อปลา ที่ใช้ปลาคุณภาพดี มีความสดใหม่ เนื้อแน่นๆ </p>
-                  </div>
-                </a>
-
-           
-            <a href="noodles.html" class="card">
-            <img src="p2.jpg" alt="ก๋วยเตี๋ยวลูกชิ้นเนื้อสนอง">    
+                </div>
+            </div>
+            <div class="card">
+                <img src="2.jpg" alt="สถานที่ 2">
                 <div class="card-content">
                     <h3>ก๋วยเตี๋ยวลูกชิ้นเนื้อสนอง</h3>
                     <p>สนองลูกชิ้นเนื้อ ตำนานที่ยิ่งมีลมหายใจ ลูกชิ้นเนื้อทำเอง หอมกลิ่นเนื้อชัดอร่อย และเป็นเตาถ่านแบบโบราณ </p>
-                 </div>
-                </a>
-
-            <a href="tae.html" class="card">
-               <img src="p3.jpg" alt=" ครัวเตเต้ ปลาแม่น้ำ เขาทราย">  
+                </div>
+            </div>
+            <div class="card">
+                <img src="3.jpg" alt="สถานที่ 3">
                 <div class="card-content">
                     <h3>ครัวเตเต้ ปลาแม่น้ำ เขาทราย</h3>
                     <p>ครัวเตเต้ รู้จริงเรื่องปรุงรส ปลาแม่น้ำ ราคากันเอง  เป็นร้านอาหารตามสั่งสไตล์บ้านๆ </p>
-               </div>
-                </a>
-          
-          <a href="raise.html" class="card">
-                <img src="p4.jpg" alt="ร้านอาหารเลี้ยงหงกี">  
+                </div>
+            </div>
+            <div class="card">
+                <img src="4.jpg" alt="สถานที่ 4">
                 <div class="card-content">
                     <h3>ร้านอาหารเลี้ยงหงกี</h3>
                     <p>ร้านอาหารจีนระดับตำนาน ไม่ต้องจัดโต๊ะจีนก็กินได้ คุณภาพเกินร้อย</p>
-             </div>
-             </a>
-       </div>
+              
+              </div>
+            </div>
+        </div>
+       
 
        
 </head>
 <body>
     
-          <div class="grid-container">
-        <a href="turn.html" class="card">
-          <img src="p5.jpg" alt="TURN ON COFFEE">
+        <div class="grid">
+            <div class="card">
+                <img src="5.jpg" alt="สถานที่ 5">
                 <div class="card-content">
                     <h3>TURN ON COFFEE</h3>
                     <p>ร้านกาแฟดังของพิจิตร Mood and tone ที่ตั้งใจวาง การตกแต่ง การเล่นแสง บ่งบอกถึงคาแรคเตอร์ร้านอย่างชัดเจน กาแฟเบลนร้านที่กลมกล่อม </p>
-              </div>
-                </a>
-        
-              <a href="black.html" class="card">
-                       <img src="p6.jpg" alt="Black Ground Cafe & Dining">  
+                </div>
+            </div>
+            <div class="card">
+                <img src="6.jpg" alt="สถานที่ 6">
                 <div class="card-content">
                     <h3>Black Ground Cafe & Dining</h3>
                     <p>คาเฟ่ใจกลางเมืองจังหวัด พิจิตร มีทั้งเมนูอาหาร เครื่องดื่ม เบเกอรี่อีกมากมาย กาแฟดี และที่สำคัญ ครัวซองต์ดีมากๆ</p>
-               </div>
-                </a>
-           
-                 <a href="dept.html" class="card">
-                        <img src="p7.jpg" alt="a.dept coffee roaster">  
+                </div>
+            </div>
+            <div class="card">
+                <img src="7.jpg" alt="สถานที่ 7">
                 <div class="card-content">
                     <h3>a.dept coffee roaster</h3>
                     <p>ร้านใหญ่บรรยากาศดีเปิดเพลงคลอเบาๆ มีที่นั่งหลายมุม สถานที่สะอาด</p>
-               </div>
-                </a>
-           
-                <a href="8th.html" class="card">
-            <img src="p8.jpg" alt="8th">      
+                </div>
+            </div>
+            <div class="card">
+                <img src="8.jpg" alt="สถานที่ 8">
                 <div class="card-content">
                     <h3>8th</h3>
                     <p>มีกาแฟหลากหลายตัวให้เลือก ถูกใจคอกาแฟ นอกจากกาแฟแล้วทางร้านยังมีเมนูเครื่องดื่มอื่นๆ อีกด้วย</p>
-                 </div>
-                </a>
-               </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </head>
 <body>
-  
-          <div class="grid-container">
-      <a href="swamp.html" class="card">
-           <img src="p9.jpg" alt="บึงสีไฟ">
+    <div class="grid">
+        <div class="card">
+            <img src="9.jpg" alt="สถานที่ 9">
             <div class="card-content">
                 <h3>บึงสีไฟ </h3>
                 <p>เป็นบึงเก่าแก่ของ จ.พิจิตร มีแหล่งน้ำขนาดใหญ่ เป็นอันดับ 3 ของประเทศไทย และเป็นสถานที่พักผ่อนหย่อนใจของชาวเมือง </p>
-              </div>
-                </a>
-                    <a href="park.html" class="card">
-               <img src="p10.jpg" alt="8th">   
+            </div>
+        </div>
+        <div class="card">
+            <img src="10.jpg" alt="สถานที่ 10">
             <div class="card-content">
                 <h3>อุทยานเมืองเก่า พิจิตร</h3>
                 <p>เเป็นที่ตั้งของเมืองพิจิตรเก่า สร้างขึ้นในสมัยพระยาโคตรบอง เมื่อประมาณ พ.ศ.1601 เพราะภายในบริเวณมีศาลหลักเมืองของจังหวัดตั้งอยู่รวมทั้งวัดมหาธาตุ </p>
-          </div>
-                </a>
-      
-           <a href="station.html" class="card">
-           <img src="p11.jpg" alt="สถานีรถไฟพิจิตร"> 
+            </div>
+        </div>
+        <div class="card">
+            <img src="11.jpg" alt="สถานที่ 11">
             <div class="card-content">
                 <h3>สถานีรถไฟพิจิตร</h3>
                 <p>ในสถานีรถไฟพิจิตร แนวย้อนยุคคลาสสิค เป็นสถานีรถไฟที่สวยงดงาม ติดอันดับ 1 ใน 10 ของสถานีรถไฟที่สวยที่สุดในประเทศไทย</p>
             </div>
-                </a>
-        
-            <a href="watbodhi.html" class="card">
-            <img src="p12.jpg" alt="วัดโพธิ์ประทับช้าง"> 
+        </div>
+        <div class="card">
+            <img src="12.jpg" alt="สถานที่ 12">
             <div class="card-content">
                 <h3>วัดโพธิ์ประทับช้าง</h3>
                 <p>ป็นวัดเก่าแก่สร้างขึ้นสมัยอยุธยาเมื่อ พ.ศ. 2242-2244 โดยสมเด็จพระศรีสรรเพชญที่ 8 หรือสมเด็จพระพุทธเจ้าเสือ ซึ่งมีพระนามเดิมคือขุนหลวงสรศักดิ์</p>
-             </div>
-                </a>
             </div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

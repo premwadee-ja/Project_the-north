@@ -15,11 +15,11 @@
     <h1>แพลตฟอร์มดิจิทัลเพื่อส่งเสริมการท่องเที่ยวภาคเหนือตอนล่างของไทย</h1>
     <nav>
         <ul>
-            <li><a href="index.html">หน้าแรก</a></li>
-            <li><a href="about.html">ข้อมูลจังหวัด</a></li>
+            <li><a href="home.html">หน้าแรก</a></li>
+            <li><a href="About.html">ข้อมูลจังหวัด</a></li>
             <li><a href="infor.html">แหล่งท่องเที่ยว</a></li>
-            <li><a href="cafe.html">คาเฟ่/ร้านอาหาร</a></li>
-            <li><a href="shop.html">แหล่งร้านฝากขาย</a></li>
+            <li><a href="infor.html">คาเฟ่/ร้านอาหาร</a></li>
+            <li><a href="in.html">แหล่งร้านฝากขาย</a></li>
         
         </ul>
     </nav>
@@ -28,7 +28,7 @@
   
   
   <style>
-       body {
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -49,7 +49,7 @@
             display: inline-block;
         }
 
-        h2:before, h2:after {
+        h2::before, h2::after {
             content: "";
             position: absolute;
             width: 50px;
@@ -58,11 +58,11 @@
             top: 50%;
         }
 
-        h2:before {
+        h2::before {
             left: -60px;
         }
 
-        h2:after {
+        h2::after {
             right: -60px;
         }
 
@@ -98,103 +98,51 @@
             text-align: left;
         }
 
-       .card h3 {
-    font-size: 16px; 
-    font-weight: bold;
-    color: #e67e22; /* สีส้ม */
-    margin-bottom: 5px;
-}
+        .card h3 {
+            font-size: 18px;
+            color: #e67e22;
+            margin: 10px 0;
+        }
 
-      .card p {
-    font-size: 14px; 
-    color: #777;
-}
-    
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* บังคับให้มี 4 คอลัมน์ต่อบรรทัด */
-    gap: 20px;
-    padding: 20px;
-}
-
-.card {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* เงาใต้การ์ด */
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card img {
-    width: 100%;
-    height: 200px; /* ปรับความสูงของรูปให้เท่ากัน */
-    object-fit: cover;
-}
-
-.card-content {
-    padding: 20px;
-    text-align: left;
-    background: white;
-}
-
-.card h3 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #e67e22; /* สีส้ม */
-    margin-bottom: 10px;
-}
-
-.card p {
-    font-size: 16px;
-    color: #777;
-}
-
+        .card p {
+            font-size: 14px;
+            color: #777;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h2>ข้อมูลจังหวัดกําแพงเพชร<h2>
-       <div class="grid-container">
-    <a href="kitti.html" class="card">
-               <img src="k1.jpg" alt="กิตติโภชนา">
+        <div class="grid">
+            <div class="card">
+                <img src="1.jpg" alt="สถานที่ 1">
                 <div class="card-content">
                     <h3>กิตติโภชนา</h3>
                     <p>ร้านอาหารจีนชื่อดังของเมืองกำแพงเพชร ร้านอาหารร้านนี้เปิดมาไม่ต่ำกว่า 40-50 ปีเป็นร้านเก่าดั้งเดิมรสชาติ </p>
                 </div>
-                </a>
-
-              <a href="test.html" class="card">
-               <img src="k2.jpg" alt="ร้านเทสตี้">
+            </div>
+            <div class="card">
+                <img src="2.jpg" alt="สถานที่ 2">
                 <div class="card-content">
                     <h3>ร้านเทสตี้</h3>
                     <p>อาหารอร่อย บริการดี ราคาไม่แพง มีเบเกอรี่ ไอศกรีม อาหารไทยทั้งจานเดียว กับข้าว ขนมไทย บรรยากาศเย็นสบาย ตกแต่งลงตัวสะอาดสะอ้าน </p>
-              </div>
-                </a>
-           
-               <a href="su.html" class="card">
-              <img src="k3.jpg" alt="สุภาโภชนา">
+                </div>
+            </div>
+            <div class="card">
+                <img src="3.jpg" alt="สถานที่ 3">
                 <div class="card-content">
                     <h3>สุภาโภชนา  </h3>
                     <p>เป็นร้านอาหารกำแพงเพชรที่เก่าแก่มาก เคยมากินนานเป็น 10 ปี ราคาไม่แพง </p>
+                </div>
             </div>
-                </a>
-           
-           <a href="edge.html" class="card">
-             <img src="k4.jpg" alt="สุภาโภชนา">
+            <div class="card">
+                <img src="4.jpg" alt="สถานที่ 4">
                 <div class="card-content">
                     <h3>ครัวริมคลอง (คลองสวนหมาก)</h3>
                     <p>ร้านอาหารไทยบรรยากาศคันทรี ริมน้ำย่านนครชุม เมนูปลานานาพันธุ์ทั้งต้ม ผัด แกง ทอด </p>
-               </div>
-             </a>
+              
+              </div>
+            </div>
         </div>
        
 
@@ -202,75 +150,71 @@
 </head>
 <body>
     
-             <div class="grid-container">
-    <a href="kayasart.html" class="card">
-                  <img src="k5.jpg" alt="Kayasart cafe ">
+        <div class="grid">
+            <div class="card">
+                <img src="5.jpg" alt="สถานที่ 5">
                 <div class="card-content">
                     <h3>Kayasart cafe </h3>
                     <p>กาแฟอร่อยราคาดี กินง่าย ส่วนตัวไม่ใช่คอกาแฟ แต่ชอบ บรรยากาศดีเพลงเพราะ</p>
-               </div>
-             </a>
-           
-                  <a href="homemade.html" class="card">
-              <img src="k6.jpg" alt="ข้าวหนม Homemade Cafe">
+                </div>
+            </div>
+            <div class="card">
+                <img src="6.jpg" alt="สถานที่ 6">
                 <div class="card-content">
                     <h3>ข้าวหนม Homemade Cafe </h3>
                     <p>ร้านเล็กๆ บรรยากาศอบอุ่น เค้กอร่อย ครื่องดื่มก็มีเมนูเก๋ๆ นอกจากกาแฟ เช่น นมอัญชัน หอมๆ กับพวกชา มีมุมนั่งชิล นั่งทำงาน</p>
-              </div>
-             </a>
-           
-               <a href="tree.html" class="card">
-              <img src="k7.jpg" alt="Tree room cafe">
+                </div>
+            </div>
+            <div class="card">
+                <img src="7.jpg" alt="สถานที่ 7">
                 <div class="card-content">
                     <h3>Tree room cafe</h3>
                     <p>คาเฟ่สไตล์มินิมอลโทนสีขาว มีเบเกอรี่อาหารเเละเครื่องให้เลือกหลากหลาย</p>
-               </div>
-             </a>
-           
-                   <a href="banyakad.html" class="card">
-                  <img src="k8.jpg" alt="Banyakad cafe">
+                </div>
+            </div>
+            <div class="card">
+                <img src="8.jpg" alt="สถานที่ 8">
                 <div class="card-content">
                     <h3>Banyakad cafe</h3>
                     <p>คาเฟ่สุดปังของจังหวัดกำแพงเพชร วิวดีอยู่ติดแม่น้ำปิง เครื่องดื่มอร่อย ช่วงกลางวันเป็นคาเฟ่ ส่วนช่วงค่ำ เป็นร้านอาหารในบรรยากาศสุดแสนจะโรแมนติก</p>
-             </div>
-             </a>        
+                </div>
+            </div>
+        </div>
     </div>
 
 </head>
 <body>
-             <div class="grid-container">
-        <a href="record.html" class="card">
-            <img src="k9.jpg" alt="อุทยานประวัติศาสตร์กำแพงเพชร">
+    <div class="grid">
+        <div class="card">
+            <img src="9.jpg" alt="สถานที่ 9">
             <div class="card-content">
                 <h3> อุทยานประวัติศาสตร์กำแพงเพชร</h3>
                 <p>เป็นอุทยานประวัติศาสตร์แห่งหนึ่งของประเทศไทยภายใต้การดูแลของกรมศิลปากร กระทรวงวัฒนธรรม  </p>
             </div>
-             </a>     
-      
-                 <a href="elite.html" class="card">
-              <img src="k10.jpg" alt="ยอดเขาโมโกจู">
+        </div>
+        <div class="card">
+            <img src="10.jpg" alt="สถานที่ 10">
             <div class="card-content">
                 <h3>ยอดเขาโมโกจู</h3>
                 <p>เป็นยอดเขาที่สูงที่สุดในอุทยานแห่งชาติแม่วงก์ “โมโกจู” เป็นภาษากระเหรี่ยง แปลว่า “คล้ายว่าฝนจะตก”</p>
             </div>
-             </a>    
-        
-               <a href="canal.html" class="card">
-              <img src="k11.jpg" alt="อุทยานแห่งชาติคลองวังเจ้า">
+        </div>
+        <div class="card">
+            <img src="11.jpg" alt="สถานที่ 11">
             <div class="card-content">
                 <h3>อุทยานแห่งชาติคลองวังเจ้า</h3>
                 <p>น้ำตกเต่าดำ เป็นน้ำตกขนาดใหญ่มี 2 ชั้น แต่ละชั้นมีความสูงมากกว่า 200 เมตร </p>
             </div>
-             </a> 
-       
-            <a href="blue.html" class="card">
-              <img src="k12.jpg" alt="บ่อน้ำสีฟ้า">
+        </div>
+        <div class="card">
+            <img src="12.jpg" alt="สถานที่ 12">
             <div class="card-content">
                 <h3>บ่อน้ำสีฟ้า </h3>
                 <p>ลักษณะเป็นบ่อดินลูกรังขนาดใหญ่ มีน้ำในบ่อเป็นสีฟ้าครามไล่สีสวยงามเหมือนน้ำทะเล</p>
-          </div>
-             </a> 
+            </div>
         </div>
+    </div>
+</div>
 
 </body>
 </html>

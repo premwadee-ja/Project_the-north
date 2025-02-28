@@ -13,11 +13,11 @@
     <h1>แพลตฟอร์มดิจิทัลเพื่อส่งเสริมการท่องเที่ยวภาคเหนือตอนล่างของไทย</h1>
     <nav>
         <ul>
-            <li><a href="index.html">หน้าแรก</a></li>
-            <li><a href="about.html">ข้อมูลจังหวัด</a></li>
+            <li><a href="home.html">หน้าแรก</a></li>
+            <li><a href="About.html">ข้อมูลจังหวัด</a></li>
             <li><a href="infor.html">แหล่งท่องเที่ยว</a></li>
-            <li><a href="cafe.html">คาเฟ่/ร้านอาหาร</a></li>
-            <li><a href="shop.html">แหล่งร้านฝากขาย</a></li>
+            <li><a href="infor.html">คาเฟ่/ร้านอาหาร</a></li>
+            <li><a href="in.html">แหล่งร้านฝากขาย</a></li>
         
         </ul>
     </nav>
@@ -47,7 +47,7 @@
             display: inline-block;
         }
 
-        h2:before, h2:after {
+        h2::before, h2::after {
             content: "";
             position: absolute;
             width: 50px;
@@ -56,11 +56,11 @@
             top: 50%;
         }
 
-        h2:before {
+        h2::before {
             left: -60px;
         }
 
-        h2:after {
+        h2::after {
             right: -60px;
         }
 
@@ -96,102 +96,51 @@
             text-align: left;
         }
 
-       .card h3 {
-    font-size: 16px; 
-    font-weight: bold;
-    color: #e67e22; /* สีส้ม */
-    margin-bottom: 5px;
-}
+        .card h3 {
+            font-size: 18px;
+            color: #e67e22;
+            margin: 10px 0;
+        }
 
-      .card p {
-    font-size: 14px; 
-    color: #777;
-}
-    
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* บังคับให้มี 4 คอลัมน์ต่อบรรทัด */
-    gap: 20px;
-    padding: 20px;
-}
-
-.card {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* เงาใต้การ์ด */
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card img {
-    width: 100%;
-    height: 200px; /* ปรับความสูงของรูปให้เท่ากัน */
-    object-fit: cover;
-}
-
-.card-content {
-    padding: 20px;
-    text-align: left;
-    background: white;
-}
-
-.card h3 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #e67e22; /* สีส้ม */
-    margin-bottom: 10px;
-}
-
-.card p {
-    font-size: 16px;
-    color: #777;
-}
+        .card p {
+            font-size: 14px;
+            color: #777;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h2>ข้อมูลจังหวัดเพชรบูรณ์</h2>
-        <div class="grid-container">
-    <a href="farm.html" class="card">
-                <img src="phet1.jpg" alt="สถานที่ 1">
+        <div class="grid">
+            <div class="card">
+                <img src="1.jpg" alt="สถานที่ 1">
                 <div class="card-content">
                     <h3>ครัวไร่สองเรา @เขาค้อ</h3>
                     <p>อากาศเย็น วิวดี เหมาะกับการพาครอบครัวมาพักผ่อน รับประทานอาหารในวันหยุดยาว มีครบทั้งอาหาร เครื่องดื่มและดนตรีสด</p>
-                 </div>
-               </a>
-
-          <a href="new.html" class="card">
-        <img src="phet2.jpg" alt="นิวไก่ย่างบัวตอง">
+                </div>
+            </div>
+            <div class="card">
+                <img src="2.jpg" alt="สถานที่ 2">
                 <div class="card-content">
                     <h3>นิวไก่ย่างบัวตอง</h3>
                     <p>อาหารหลากหลาย อร่อย บรรยากาศร้านดี ที่จอดรถสะดวก</p>
-               </div>
-               </a>
-
-               <a href="food1.html" class="card">
-        <img src="phet3.jpg" alt="ร้านอาหารไร่จันทร์แรม">
+                </div>
+            </div>
+            <div class="card">
+                <img src="3.jpg" alt="สถานที่ 3">
                 <div class="card-content">
                     <h3>ร้านอาหารไร่จันทร์แรม</h3>
                     <p>ร้านอาหารไทยอันดับต้นๆของเขาค้อ บริการที่พักและร้านอาหาร พร้อมด้วยบรรยากาศธรรมชาติ </p>
-               </div>
-               </a>
-                    <a href="le.html" class="card">
-        <img src="phet4.jpg" alt="เลอฃวต เขาค้อ">
+                </div>
+            </div>
+            <div class="card">
+                <img src="4.jpg" alt="สถานที่ 4">
                 <div class="card-content">
                     <h3>เลอฃวต เขาค้อ</h3>
                     <p>ร้านอาหารหลากสไตล์ที่เสิร์ฟตั้งแต่อาหารไทย อาหารอีสาน อาหารยุโรป พร้อมกาแฟและเครื่องดื่มต่างๆ </p>
               
               </div>
-            </a>
+            </div>
         </div>
        
 
@@ -199,72 +148,71 @@
 </head>
 <body>
     
-       <div class="grid-container">
-    <a href="storycup.html" class="card">
-                 <img src="phet5.jpg" alt="Story cup เขาค้อ">
+        <div class="grid">
+            <div class="card">
+                <img src="5.jpg" alt="สถานที่ 5">
                 <div class="card-content">
                     <h3>Story cup เขาค้อ</h3>
                     <p>ร้านกาแฟโล่ง โปร่ง สบาย อยู่บนเนินเขา มีวิวดีๆ กับมุมน่ารักๆ ให้ถ่ายรูปมากมาย</p>
-          </div>
-    </a>
-            <a href="jolly.html" class="card">
-        <img src="phet6.jpg" alt="Jolly Cafe Khao-Kho">
+                </div>
+            </div>
+            <div class="card">
+                <img src="6.jpg" alt="สถานที่ 6">
                 <div class="card-content">
                     <h3>Jolly Cafe Khao-Kho</h3>
                     <p>ที่Jolly Cafe เขาค้อ เพชรบูรณ์ หนึ่งในคาเฟ่บรรยากาศฟรุ้งฟริ้งน่ารักที่สุด มุมภาพถ่ายในสวนเก๋ๆ </p>
-                   </div>
-    </a>
-              <a href="homek.html" class="card">
-        <img src="phet7.jpg" alt="บ้านอากง คาเฟ่">
+                </div>
+            </div>
+            <div class="card">
+                <img src="7.jpg" alt="สถานที่ 7">
                 <div class="card-content">
                     <h3>บ้านอากง คาเฟ่</h3>
                     <p>ร้านอยู่ติดถนนใหญ่ ร้านกาแฟบรรยากาศดี ราคาย่อมเยา ที่บ้านอากง เขาค้อ มาเติมพลังพร้อมวิวสวย!</p>
-         </div>
-    </a>
-              <a href="mongker.html" class="card">
-        <img src="phet8.jpg" alt="Mongker Drip Coffee">
+                </div>
+            </div>
+            <div class="card">
+                <img src="8.jpg" alt="สถานที่ 8">
                 <div class="card-content">
                     <h3>Mongker Drip Coffee </h3>
                     <p>ร้านกาแฟ นั่งชิลๆกับบรรยากาศท่ามกลางสายลมเย็นๆกับวิวกังหันลม</p>
                 </div>
-    </a>
-</div>
-
-
+            </div>
+        </div>
+    </div>
 
 </head>
 <body>
-      <div class="grid-container">
-    <a href="he1.html" class="card">
-             <img src="phet9.jpg" alt="เขาค้อ">
+    <div class="grid">
+        <div class="card">
+            <img src="9.jpg" alt="สถานที่ 9">
             <div class="card-content">
                 <h3>เขาค้อ</h3>
                 <p>แลนด์มาร์คสำคัญที่ห้ามพลาดสำหรับการมาเยือนเขาค้อ งดงาม ทั้งภูมิสถาปัตย์ วิวทิวทัศน์รายรอบ และยังเป็นจุดชมวิวทะเลหมอกที่สวยมากที่สุดแห่งหนึ่ง</p>
-               </div>
-    </a>
-         <a href="qua.html" class="card">
-        <img src="phet10.jpg" alt="หล่มสัก">
+            </div>
+        </div>
+        <div class="card">
+            <img src="10.jpg" alt="สถานที่ 10">
             <div class="card-content">
                 <h3>หล่มสัก</h3>
                 <p>หล่มสัก เป็นอำเภอหนึ่งทางตอนเหนือของจังหวัดเพชรบูรณ์ เดิมชื่อ อำเภอเมือง และอำเภอวัดป่า และเคยเป็นส่วนหนึ่งของจังหวัดหล่มศักดิ์ จนกระทั่งจังหวัดหล่มศักดิ์ถูกยุบรวมเข้ากับจังหวัดเพชรบูรณ์</p>
-                  </div>
-    </a>
-        <a href="watelement.html" class="card">
-        <img src="phet11.jpg" alt="วัดพระธาตุผาซ่อนแก้ว">
+            </div>
+        </div>
+        <div class="card">
+            <img src="11.jpg" alt="สถานที่ 11">
             <div class="card-content">
                 <h3>วัดพระธาตุผาซ่อนแก้ว</h3>
                 <p>วัดชื่อดังที่ตั้งอยู่ท่ามกลางขุนเขาที่สลับซับซ้อนบนเขาค้อ สามารถมองเห็นวิวทิวทัศน์ได้รอบทิศทางทุกโมงยามแห่งความงาม เริ่มตั้งแต่เช้าในวันที่อากาศเป็นใจ</p>
-         </div>
-    </a>
-        
-        <a href="tev.html" class="card">
-        <img src="phet12.jpg" alt=" ทุ่งกังหันลมเขาค้อ">   
-           <div class="card-content">
+            </div>
+        </div>
+        <div class="card">
+            <img src="12.jpg" alt="สถานที่ 12">
+            <div class="card-content">
                 <h3>สถานที่ท่องเที่ยว ทุ่งกังหันลมเขาค้อ</h3>
                 <p>แหล่งผลิตพลังงานสะอาดที่กลายเป็นแหล่งท่องเที่ยวที่ดึงดูดนักท่องเที่ยวได้มากที่สุดแห่งหนึ่งของค้อ "ทุ่งกังหันลม" ตั้งอยู่บนเนินเขาสูง</p>
+            </div>
         </div>
-    </a>
     </div>
+</div>
 
 </body>
 </html>
