@@ -3,58 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>แพลตฟอร์มดิจิทัลเพื่อส่งเสริมการท่องเที่ยวภาคเหนือตอนล่างของไทย </title>
+    <title>แพลตฟอร์มดิจิทัล</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            background: #34495e;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        nav ul li a:hover {
+            background: #e67e22;
+            border-radius: 5px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .province-section {
+            background: url('background.jpg') no-repeat center center/cover;
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .province-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .province-list a {
+            background: rgba(52, 152, 219, 0.8);
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+            font-size: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .province-list a:hover {
+            background: rgba(41, 128, 185, 0.9);
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-  
-  
-  
-  
     <header>
-        <h1>แพลตฟอร์มดิจิทัลเพื่อส่งเสริมการท่องเที่ยวภาคเหนือตอนล่างของไทย</h1>
-        <nav>
-            <nav>
-                <ul>
-                <li><a href="index.html">หน้าแรก</a></li>
-               <li><a href="about.html">ข้อมูลจังหวัด</a></li>
-               <li><a href="infor.html">แหล่งท่องเที่ยว</a></li>
-               <li><a href="cafe.html">คาเฟ่/ร้านอาหาร</a></li>
-               <li><a href="shop.html">แหล่งร้านฝากขาย</a></li>
-                
-                </ul>
-            </nav>
+        แพลตฟอร์มดิจิทัลเพื่อส่งเสริมการท่องเที่ยวภาคเหนือตอนล่างของไทย
     </header>
-    
 
-    
-    <main>
-       
-        
-        <section class="province-categories">
-            <h2>เลือกหมวดหมู่จังหวัด</h2>
-            
-           
-            
-         <div class="region">
-    <h3>ภาคเหนือตอนล่าง</h3>
-    <ul>
-        <li><a href="tak.html">ตาก</a></li>
-        <li><a href="phitsanulok.html">พิษณุโลก</a></li>
-        <li><a href="sukhothai.html">สุโขทัย</a></li>
-        <li><a href="phichit.html">พิจิตร</a></li>
-        <li><a href="phetchabun.html">เพชรบูรณ์</a></li>
-        <li><a href="uttaradit.html">อุตรดิตถ์</a></li>
-        <li><a href="kamphaengphet.html">กำแพงเพชร</a></li>
-        <li><a href="nakhonsawan.html">นครสวรรค์</a></li>
-    </ul>
-</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="about.html">ข้อมูลจังหวัด</a></li>
+            <li><a href="infor.html">แหล่งท่องเที่ยว</a></li>
+            <li><a href="cafe.html">คาเฟ่/ร้านอาหาร</a></li>
+            <li><a href="shop.html">แหล่งร้านฝากขาย</a></li>
+        </ul>
+    </nav>
 
-            
-            
-   
-    
-
-
+    <div class="container">
+        <h2>เลือกหมวดหมู่จังหวัด</h2>
+        <div class="province-section">
+            <h3 style="text-align:center; color:#e67e22;">ภาคเหนือตอนล่าง</h3>
+            <div class="province-list">
+                <a href="#">ตาก</a>
+                <a href="#">พิษณุโลก</a>
+                <a href="#">สุโขทัย</a>
+                <a href="#">พิจิตร</a>
+                <a href="#">เพชรบูรณ์</a>
+                <a href="#">อุตรดิตถ์</a>
+                <a href="#">กำแพงเพชร</a>
+                <a href="#">นครสวรรค์</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
