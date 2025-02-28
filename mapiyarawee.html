@@ -53,7 +53,7 @@
         .leaflet-routing-container .leaflet-routing-waypoint .leaflet-routing-icon {
             background-color: #ff6f61; /* เปลี่ยนสีไอคอนให้เป็นสีเด่น */
         }
-  .back-button {
+   .back-button {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
@@ -84,13 +84,11 @@
 .back-button:hover {
     background-color: #e0554d;
 }
-
     </style>
 </head>
 <body>
    
-    
-       <body>
+     <body>
     <button onclick="goBack()" class="back-button">⬅ ย้อนกลับ</button>
     <h2>แผนที่ร้านอาหารไอยราวดี</h2>
     <div id="map"></div>
@@ -104,7 +102,8 @@
             }
         }
     </script>
-</body>
+
+     </body>
            
              <script>
         var map = L.map('map').setView([16.8761, 99.1456], 12); // ซูมระดับ 12 เพื่อแสดงพื้นที่กว้างขึ้น
