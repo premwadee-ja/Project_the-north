@@ -56,34 +56,42 @@
             top: 50%;
         }
 
-        h2::before {
-            left: -60px;
-        }
+        h2::before { left: -60px; }
+        h2::after { right: -60px; }
 
-        h2::after {
-            right: -60px;
-        }
+      .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 คอลัมน์ */
+    grid-template-rows: repeat(4, auto); /* 4 แถว */
+    gap: 20px;
+    margin-top: 20px;
+}
 
-        .grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
+.card {
+    text-decoration: none; /* เอาขีดเส้นใต้ลิงก์ออก */
+    color: inherit; /* ใช้สีปกติของข้อความ */
+    display: block; /* ทำให้ลิงก์คลุมทั้งการ์ด */
+}
+
+.card h3, .card p {
+    color: inherit; /* ใช้สีข้อความเดิม */
+}
+
+.card:visited, .card:active, .card:hover {
+    color: inherit; /* ป้องกันสีเปลี่ยนเมื่อคลิก */
+    text-decoration: none;
+}
 
         .card {
             background: white;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgb(129, 128, 128);
+            box-shadow: 0 4px 8px rgba(129, 128, 128, 0.5);
             overflow: hidden;
-            width: 23%;
-            margin-bottom: 20px;
             transition: transform 0.3s ease-in-out;
+            margin-bottom: 20px;
         }
 
-        .card:hover {
-            transform: scale(1.05);
-        }
+        .card:hover { transform: scale(1.05); }
 
         .card img {
             width: 100%;
@@ -106,140 +114,148 @@
             font-size: 14px;
             color: #777;
         }
+        
     </style>
 </head>
 <body>
     <div class="container">
         <h2>ข้อมูลจังหวัดพิษณุโลก</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="1.jpg" alt="สถานที่ 1">
+       
+       
+         <!-- การ์ดที่ 1 -->
+         <div class="grid">
+            <a href="ton.html" class="card">
+                <img src="phi1.jpg" alt="ร้านอาหารต้นตาล พิษณุโลก">
                 <div class="card-content">
                     <h3>ร้านอาหารต้นตาล พิษณุโลก</h3>
                     <p>ร้านน่ารัก บรรยากาศดีสะอาดปลอดโปร่ง บริการก็ดี ราคาไม่แรง อาหารอร่อย จอดรถสะดวก</p>
                 </div>
-            </div>
-            <div class="card">
-                <img src="2.jpg" alt="สถานที่ 2">
+            </a>
+            
+            
+            <!-- การ์ดที่ 2 -->
+            <a href="luck.html" class="card">
+                <img src="phi2.jpg" alt="ครัวเจ๊โชค">
                 <div class="card-content">
                     <h3>ครัวเจ๊โชค</h3>
                     <p>ใครชอบทานปลาขอให้มาโดน รสชาติที่นี้อร่อยทุกอย่าง ปลาสดๆ  </p>
                 </div>
-            </div>
-            <div class="card">
-                <img src="3.jpg" alt="สถานที่ 3">
+
+        </a>
+            
+            
+           <!-- การ์ดที่ 3 -->
+           <a href="penang.html" class="card">
+            <img src="phi3.jpg" alt="Penang Steakhouse ร้านปีนังสเต็ก">
                 <div class="card-content">
                     <h3>Penang Steakhouse ร้านปีนังสเต็ก</h3>
                     <p>ร้านนี้ เป็นสไตล์ร้านอาหารฟิวชั่น มีครบทั้งอาหารไทย สไตล์ตะวันตก มีพาสต้า สเต๊ก ที่มีเนื้อให้เลือกเยอะ </p>
                 </div>
-            </div>
-            <div class="card">
-                <img src="4.jpg" alt="สถานที่ 4">
+            </a>
+           
+            <!-- การ์ดที่ 4 -->
+            <a href="food.html" class="card">
+                <img src="phi4.jpg" alt="ฝาชี อาหารไทยพื้นบ้าน">
                 <div class="card-content">
                     <h3>ฝาชี อาหารไทยพื้นบ้าน</h3>
                     <p>บรรยากาศร้านดีมาก เป็นร้านนั่งมีแอร์ มีที่จอดรถหน้าร้าน สะดวกสบาย มีห้องน้ำสะอาด ฝาชีมีเมนูอาหารเยอะ แต่อาหารค่อนข้างติดรสหวานทุกเมนู</p>
               
-              </div>
             </div>
-        </div>
-       
-
+        </a>
+    </div>
        
 </head>
 <body>
     
-        <div class="grid">
-            <div class="card">
-                <img src="5.jpg" alt="สถานที่ 5">
+        
+             <!-- การ์ดที่ 5 -->
+             <div class="grid">
+                <a href="f2.html" class="card">
+                    <img src="phi1.jpg" alt="F2.8 Coffee Lab">
                 <div class="card-content">
                     <h3>F2.8 Coffee Lab</h3>
                     <p>ร้านสไตล์อิฐแดง หน้าร้านสวยถ่ายรูปได้ ในร้านกว้างนั่งสบาย มีเมนูให้เลือกเยอะมากราคาดีย์ พนักงานน่ารักมากๆ </p>
                 </div>
-            </div>
-            <div class="card">
-                <img src="6.jpg" alt="สถานที่ 6">
+            </a>
+           
+           
+             <!-- การ์ดที่ 6-->
+             <a href="black.html" class="card">
+                <img src="phi6.jpg" alt="Black Ground Cafe & Dining">
                 <div class="card-content">
-                    <h3>F2.8 Coffee Lab</h3>
+                    <h3>Black Ground Cafe & Dining</h3>
                     <p>บรรยากาศ/สถานที่ ตกแต่งเรียบง่ายคลุมโทนด้วยสีขาว มีมุมถ่ายรูปค่อยข้างเยอะ มีเมนูให้เลือกมากมาย แถมมีน้องเด็กเอ็นขนฟูๆคอยต้อนรับอีกด้วย</p>
                 </div>
-            </div>
-            <div class="card">
-                <img src="7.jpg" alt="สถานที่ 7">
+            </a>
+            
+            <!-- การ์ดที่ 7-->
+        <a href="ease.html" class="card">
+            <img src="phi7.jpg" alt="Ease cafe พิษณุโลก">
                 <div class="card-content">
                     <h3>Ease cafe พิษณุโลก</h3>
                     <p>บรรยากาศพื้นบ้าน เงียบสงบ ท่ามกลางป่าเขา สไตล์อินดี้ ภายในร้านมีร่มเงาต้นไม้และ พร้อมจิบกาแฟดริปหอมกรุ่นจากฮิมม่อน</p>
                 </div>
-            </div>
-            <div class="card">
-                <img src="8.jpg" alt="สถานที่ 8">
+            </a>
+           
+           
+            <!-- การ์ดที่ 8-->
+            <a href="ree.html" class="card">
+                <img src="phi8.jpg" alt="ร้านอาหารเกษนรี & คาเฟ่">
                 <div class="card-content">
                     <h3>ร้านอาหารเกษนรี & คาเฟ่</h3>
                     <p>ร้านบรรยากาศดีตกแต่งสวยมาก เป็นอีกหนึ่งจุดเข็คอินที่น่าสนใจ</p>
                 </div>
-            </div>
-        </div>
+            </a>   
     </div>
 
 </head>
 <body>
-    <div class="grid">
-        <div class="card">
-            <img src="9.jpg" alt="สถานที่ 9">
+    
+    
+           <!-- การ์ดที่ 9 -->
+           <div class="grid">
+            <a href="watphra.html" class="card">
+                <img src="phi9.jpg" alt="วัดพระศรีรัตนมหาธาตุวรมหาวิหาร">
             <div class="card-content">
                 <h3>วัดพระศรีรัตนมหาธาตุวรมหาวิหาร</h3>
                 <p>หรือชื่อที่คนส่วนใหญ่เรียกกันว่า "วัดใหญ่" ตั้งอยู่ที่ ถนนพุทธบูชา ริมฝั่งแม่น้ำน่านด้านทิศตะวันออก ตรงข้ามกับศาลากลางจังหวัดพิษณุโลก </p>
             </div>
-        </div>
-        <div class="card">
-            <img src="10.jpg" alt="สถานที่ 10">
+        </a>  
+        
+        
+       
+         <!-- การ์ดที่ 10 -->
+         <a href="royal.html" class="card">
+            <img src="phi10.jpg" alt="พระราชวังจันทน์">
             <div class="card-content">
                 <h3>พระราชวังจันทน์</h3>
                 <p>เป็นพระราชวังโบราณ ตั้งอยู่ริมแม่น้ำน่านฝั่งตะวันตก ทางด้านทิศเหนือของเมืองพิษณุโลก เป็นสถานที่เสด็จพระราชสมภพของสมเด็จพระนเรศวรมหาราช</p>
             </div>
-        </div>
-        <div class="card">
-            <img src="11.jpg" alt="สถานที่ 11">
+        </a>
+       
+       <!-- การ์ดที่ 11 -->
+       <a href="pi.html" class="card">
+        <img src="phi11.jpg" alt="พิพิธภัณฑ์พื้นบ้านจ่าทวี">
             <div class="card-content">
                 <h3>พิพิธภัณฑ์พื้นบ้านจ่าทวี</h3>
                 <p>ทำหน้าที่เก็บรวบรวมข้าวของเครื่องใช้ที่แสดงวิถีชีวิตพื้นบ้านของชาวจังหวัดพิษณุโลก ด้านในจัดเป็นสวนธรรมชาติตกแต่งด้วยพันธุ์ไม้ไทยหลากหลายชนิด</p>
             </div>
-        </div>
-        <div class="card">
-            <img src="12.jpg" alt="สถานที่ 12">
+        </a>
+       
+       
+       
+        <!-- การ์ดที่ 12 -->
+        <a href="he.html" class="card">
+            <img src="phi12.jpg" alt="เขาโปกโล้น">
+                <div class="card-content">
             <div class="card-content">
                 <h3>เขาโปกโล้น </h3>
                 <p>เดินขึ้นเขาโปกโล้น ชมพระอาทิตย์ขึ้นท่ามกลางสายหมอกแห่งร่องเขานครชุม. ภาพสายหมอกบางเบา มองเห็นถนนเส้นเล็ก ๆ บ้านหลังน้อย ๆ สลับกับต้นไม้และผืนนาสีเขียวที่ปกคลุมทั่วบริเวณร่องภูเขา </p>
             </div>
-        </div>
+        </a>
     </div>
-</div>
 
 </body>
 </html>
 
     
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
-</html>
-
-
-
-
-<link rel='dns-prefetch' href='//www.googletagmanager.com' />
-<link rel='dns-prefetch' href='//pagead2.googlesyndication.com' />
-<link rel="alternate" type="application/rss+xml" title="KINKUBSHER &raquo; Feed" href="https://kinkubsher.com/feed/" />
-<link rel="alternate" type="application/rss+xml" title="KINKUBSHER &raquo; Comments Feed" href="https://kinkubsher.com/comments/feed/" />
