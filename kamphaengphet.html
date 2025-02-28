@@ -69,6 +69,20 @@
     margin-top: 20px;
 }
 
+.card {
+    text-decoration: none; /* เอาขีดเส้นใต้ลิงก์ออก */
+    color: inherit; /* ใช้สีปกติของข้อความ */
+    display: block; /* ทำให้ลิงก์คลุมทั้งการ์ด */
+}
+
+.card h3, .card p {
+    color: inherit; /* ใช้สีข้อความเดิม */
+}
+
+.card:visited, .card:active, .card:hover {
+    color: inherit; /* ป้องกันสีเปลี่ยนเมื่อคลิก */
+    text-decoration: none;
+}
 
         .card {
             background: white;
