@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลจังหวัด</title>
+  
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+       
+    <h1>แพลตฟอร์มดิจิทัลเพื่อส่งเสริมการท่องเที่ยวภาคเหนือตอนล่างของไทย</h1>
+    <nav>
+        <ul>
+            <li><a href="home.html">หน้าแรก</a></li>
+            <li><a href="About.html">ข้อมูลจังหวัด</a></li>
+            <li><a href="infor.html">แหล่งท่องเที่ยว</a></li>
+            <li><a href="infor.html">คาเฟ่/ร้านอาหาร</a></li>
+            <li><a href="in.html">แหล่งร้านฝากขาย</a></li>
+        
+        </ul>
+    </nav>
+    </header>
+  
+  
+  
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 32px;
+            color: hsl(0, 1%, 35%);
+            position: relative;
+            display: inline-block;
+        }
+
+        h2:before, h2::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: #e67e22;
+            top: 50%;
+        }
+
+        h2::before {
+            left: -60px;
+        }
+
+        h2::after {
+            right: -60px;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgb(129, 128, 128);
+            overflow: hidden;
+            width: 23%;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+            text-align: left;
+        
+        }
+
+        .card h3 {
+            font-size: 18px;
+            color: #e67e22;
+            margin: 10px 0;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #777;
+        }
+   
+        a {
+    text-decoration: underline;
+    text-decoration-color: #e67e22; /* สีของเส้นใต้ */
+    color: #5c7854; /* สีข้อความของลิงก์ */
+}
+
+   </style>
+</head>
+<body>
+    <div class="container">
+        <h2>แหล่งของฝากประจําจังหวัด</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="1.jpg" alt="สถานที่ 1">
+                <div class="card-content">
+                    <h3>จังหวัดตาก</h3>
+                    <a href="https://www.google.com/maps/d/edit?mid=1Cflvx3VB94HJJWZF4Bnwk_9dWfHBlNg&usp=sharing" target="_blank">ร้านค้าของฝากที่แนะนํา</a>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="2.jpg" alt="สถานที่ 2">
+                <div class="card-content">
+                    <h3>จังหวัดพิษณุโลก</h3>
+                    <a href="https://www.google.com/maps/d/edit?mid=1LoFRmwenjjjZECsMvI1YoASTQM9L-3s&usp=sharing" target="_blank">ร้านค้าของฝากที่แนะนํา</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="3.jpg" alt="สถานที่ 3">
+                <div class="card-content">
+                    <h3>จังหวัดเพชรบูรณ์</h3>
+                    <a href="https://www.google.com/maps/d/edit?mid=1G0xPzR-0q0uDWXB4_ShKmF0gOpmpBr0&usp=sharing" target="_blank">ร้านค้าของฝากที่แนะนํา</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="4.jpg" alt="สถานที่ 4">
+                <div class="card-content">
+                    <h3>จังหวัดอุตรดิตถ์</h3>
+                    <a href="https://www.google.com/maps/d/edit?mid=18UDVSc75wvTuAX6nBMYkMlg_QDcCbrk&usp=sharing" target="_blank">ร้านค้าของฝากที่แนะนํา</a>
+              
+              </div>
+            </div>
+        </div>
+       
+
+       
+</head>
+<body>
+    
+        <div class="grid">
+            <div class="card">
+                <img src="5.jpg" alt="สถานที่ 5">
+                <div class="card-content">
+                    <h3>จังหวัดสุโขทัย</h3>
+                    <a href="https://www.google.com/maps/d/edit?mid=1mk4dB57130ZtF-ATL17iPnv7pg98bv8&usp=sharing" target="_blank">ร้านค้าของฝากที่แนะนํา</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="6.jpg" alt="สถานที่ 6">
+                <div class="card-content">
+                    <h3>จังหวัดพิจิตร</h3>
+                    <a href="https://www.google.com/maps/d/edit?mid=1kw4UIi0JTDAwUzczCOzfDZ2b0OEVNLA&usp=sharing" target="_blank">ร้านค้าของฝากที่แนะนํา</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="7.jpg" alt="สถานที่ 7">
+                <div class="card-content">
+                    <h3>จังหวัดกําแพงเพชร</h3>
+                    <a href="https://www.google.com/maps/d/edit?mid=1OlFfU5qs_5iE-Umq7XWvirVlFoMc6o4&usp=sharing" target="_blank">ร้านค้าของฝากที่แนะนํา</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="8.jpg" alt="สถานที่ 8">
+                <div class="card-content">
+                    <h3>จังหวัดนครสวรรค์</h3>
+                    <a href="https://www.google.com/maps/d/edit?mid=13iWERN810q_B1hgmpw4l18ROTpMJ37w&usp=sharing" target="_blank">ร้านค้าของฝากที่แนะนํา</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</head>
+<body>
+    
+
+</body>
+</html>
+
+    
+
+
+
+
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel='dns-prefetch' href='//pagead2.googlesyndication.com' />
+<link rel="alternate" type="application/rss+xml" title="KINKUBSHER &raquo; Feed" href="https://kinkubsher.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="KINKUBSHER &raquo; Comments Feed" href="https://kinkubsher.com/comments/feed/" />
