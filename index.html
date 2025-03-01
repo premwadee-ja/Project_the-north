@@ -207,8 +207,8 @@
         </div>
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
+      <script>
+       document.addEventListener("DOMContentLoaded", function() {
             let images = ["test1.png", "test2.png", "test3.png", "test4.png", "test5.png", "test6.png", "test7.png", "test8.png"];
             let index = 0;
             let frame = document.querySelector(".frame img");
@@ -222,7 +222,11 @@
                 }, 2000); // ดีเลย์เปลี่ยนรูป 2 วินาที
             }, 5000); // สไลด์ทุก 5 วินาที
         });
-        // เปลี่ยนรูปภาพในกรอบ
+    
+      </script>
+
+            <script>
+         // เปลี่ยนรูปภาพในกรอบ
         const imageList = ['t1.jpg', 't2.jpg', 't3.jpg', 't4.jpg'];
         function changeImage(frame, direction) {
             let img = frame.querySelector("img");
@@ -261,7 +265,7 @@
                 alert("ไม่พบข้อมูลจังหวัดที่ต้องการ");
             }
         }
-
+ 
 document.getElementById("search-btn").addEventListener("click", searchProvince);
 document.getElementById("search-input").addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
