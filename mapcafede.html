@@ -83,19 +83,22 @@
     transition: background 0.3s ease-in-out;
 }
 
-
+.back-button:hover {
+    background-color: #e0554d;
 }
+
+    
     </style>
 </head>
 <body>
-   
-            <body>
+  
+    
+         <body>
     <button onclick="goBack()" class="back-button">⬅ ย้อนกลับ</button>
     <h2>แผนที่Cafe De Tree</h2>
     <div id="map"></div>
     
-    
-                  <script>
+    <script>
         function goBack() {
             if (window.history.length > 1) {
                 window.history.back(); // ถ้ามีหน้าก่อนหน้า ให้ย้อนกลับ
@@ -103,7 +106,9 @@
                 window.location.href = "cafede.html"; // ถ้าไม่มีหน้าก่อนหน้า ให้ไปหน้าแรก
             }
         }
-                <script>
+    </script>
+             
+             <script>
         var map = L.map('map').setView([16.8761, 99.1456], 12); // ซูมระดับ 12 เพื่อแสดงพื้นที่กว้างขึ้น
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -116,8 +121,8 @@
         // ปักหมุดร้านวันเดย์ วันคาเฟ่
         var restaurant = {
             name: "Cafe De Tree",
-            lat: 17.0170,
-            lon:  99.7220
+            lat: 17.0076,
+            lon: 99.7966
         };
 
         var restaurantMarker = L.marker([restaurant.lat, restaurant.lon]).addTo(map)
