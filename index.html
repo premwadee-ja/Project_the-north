@@ -48,7 +48,7 @@
             font-size: 1.1em;
         }
 
-        /* Hero Image Section */
+        /* Hero Image Section - Slideshow */
         .hero-image {
             position: relative;
             width: 100vw;
@@ -58,8 +58,6 @@
             align-items: center;
             background-size: cover;
             background-position: center;
-            transition: background-image 1s ease-in-out;
-            background-image: url('test1.png');
         }
 
         
@@ -211,16 +209,14 @@
        document.addEventListener("DOMContentLoaded", function() {
             let images = ["test1.png", "test2.png", "test3.png", "test4.png", "test5.png", "test6.png", "test7.png", "test8.png"];
             let index = 0;
-            let frame = document.querySelector(".frame img");
+            let heroImage = document.querySelector(".hero-image");
 
-            setInterval(() => {
+            function changeImage() {
+                heroImage.style.backgroundImage = `url('${images[index]}')`;
                 index = (index + 1) % images.length;
-                frame.style.opacity = 0;
-                setTimeout(() => {
-                    frame.src = images[index];
-                    frame.style.opacity = 1;
-                }, 2000); // ดีเลย์เปลี่ยนรูป 2 วินาที
-            }, 5000); // สไลด์ทุก 5 วินาที
+                requestAnimationFrame(changeImage);
+            }
+            changeImage();
         });
     
       </script>
