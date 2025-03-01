@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลคาเฟ่/ร้านอาหาร</title>
+    <script src="search.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+       
+    <h1>แพลตฟอร์มดิจิทัลเพื่อส่งเสริมการท่องเที่ยวภาคเหนือตอนล่างของไทย</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="about.html">ข้อมูลจังหวัด</a></li>
+            <li><a href="infor.html">แหล่งท่องเที่ยว</a></li>
+            <li><a href="cafe.html">คาเฟ่/ร้านอาหาร</a></li>
+            <li><a href="shop.html">แหล่งร้านฝากขาย</a></li>
+        
+        </ul>
+    </nav>
+    </header>
+  
+  
+  
+  <style>
+       body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 32px;
+            color: hsl(0, 1%, 35%);
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::before, h2::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: #e67e22;
+            top: 50%;
+        }
+
+        h2::before { left: -60px; }
+        h2::after { right: -60px; }
+
+      .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 คอลัมน์ */
+    grid-template-rows: repeat(4, auto); /* 4 แถว */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    text-decoration: none; /* เอาขีดเส้นใต้ลิงก์ออก */
+    color: inherit; /* ใช้สีปกติของข้อความ */
+    display: block; /* ทำให้ลิงก์คลุมทั้งการ์ด */
+}
+
+.card h3, .card p {
+    color: inherit; /* ใช้สีข้อความเดิม */
+}
+
+.card:visited, .card:active, .card:hover {
+    color: inherit; /* ป้องกันสีเปลี่ยนเมื่อคลิก */
+    text-decoration: none;
+}
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(129, 128, 128, 0.5);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 20px;
+        }
+
+        .card:hover { transform: scale(1.05); }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+            text-align: left;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            color: #e67e22;
+            margin: 10px 0;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #777;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>ข้อมูลคาเฟ่/ร้านอาหาร</h2>
+        
+        <!-- การ์ดที่ 1 -->
+        <div class="grid">
+            <a href="thai.html" class="card">
+                <img src="pi.html" alt="ร้านอาหารไทย ครัวปลาใหญ่">
+                <div class="card-content">
+                    <h3>ร้านอาหารไทย ครัวปลาใหญ่</h3>
+                    <p> เป็นร้านอาหารบรรยากาศสบายๆ  เมนูเด่นของร้านคือเหล่าเมนูจากเนื้อปลา ที่ใช้ปลาคุณภาพดี มีความสดใหม่ เนื้อแน่นๆ </p>
+                </div>
+            </a>
+           
+           
+             <!-- การ์ดที่ 2 -->
+             <a href="noodles.html" class="card">
+                <img src="pi2.jpg" alt="ก๋วยเตี๋ยวลูกชิ้นเนื้อสนอง">
+                <div class="card-content">
+                    <h3>ก๋วยเตี๋ยวลูกชิ้นเนื้อสนอง</h3>
+                    <p>สนองลูกชิ้นเนื้อ ตำนานที่ยิ่งมีลมหายใจ ลูกชิ้นเนื้อทำเอง หอมกลิ่นเนื้อชัดอร่อย และเป็นเตาถ่านแบบโบราณ </p>
+                </div>
+            </a>
+           
+           
+             <!-- การ์ดที่ 3 -->
+             <a href="tae.html" class="card">
+                <img src="pi3.jpg" alt="ครัวเตเต้ ปลาแม่น้ำ เขาทราย">
+                <div class="card-content">
+                    <h3>ครัวเตเต้ ปลาแม่น้ำ เขาทราย</h3>
+                    <p>ครัวเตเต้ รู้จริงเรื่องปรุงรส ปลาแม่น้ำ ราคากันเอง  เป็นร้านอาหารตามสั่งสไตล์บ้านๆ </p>
+            </div>
+        </a>
+           
+             <!-- การ์ดที่ 4 -->
+             <a href="raise.html" class="card">
+                <img src="pi4.jpg" alt="ร้านอาหารเลี้ยงหงกี">
+                <div class="card-content">
+                    <h3>ร้านอาหารเลี้ยงหงกี</h3>
+                    <p>ร้านอาหารจีนระดับตำนาน ไม่ต้องจัดโต๊ะจีนก็กินได้ คุณภาพเกินร้อย</p>
+              
+                </div>
+            </a>
+        </div>
+       
+
+       
+</head>
+<body>
+    
+             <!-- การ์ดที่ 5 -->
+              <div class="grid">
+            <a href="turn.html" class="card">
+                <img src="pi5.jpg" alt="TURN ON COFFEE">
+                <div class="card-content">
+                    <h3>TURN ON COFFEE</h3>
+                    <p>ร้านกาแฟดังของพิจิตร Mood and tone ที่ตั้งใจวาง การตกแต่ง การเล่นแสง บ่งบอกถึงคาแรคเตอร์ร้านอย่างชัดเจน กาแฟเบลนร้านที่กลมกล่อม </p>
+             
+                </div>
+            </a>
+            
+            
+             <!-- การ์ดที่ 6-->
+             <a href="black.html" class="card">
+                <img src="pi6.jpg" alt="Black Ground Cafe & Dining">
+                <div class="card-content">
+                    <h3>Black Ground Cafe & Dining</h3>
+                    <p>คาเฟ่ใจกลางเมืองจังหวัด พิจิตร มีทั้งเมนูอาหาร เครื่องดื่ม เบเกอรี่อีกมากมาย กาแฟดี และที่สำคัญ ครัวซองต์ดีมากๆ</p>
+                </div>
+            </a>
+            
+            
+        <!-- การ์ดที่ 7-->
+        <a href="dept.html" class="card">
+            <img src="pi7.jpg" alt="a.dept coffee roaster">
+                <div class="card-content">
+                    <h3>a.dept coffee roaster</h3>
+                    <p>ร้านใหญ่บรรยากาศดีเปิดเพลงคลอเบาๆ มีที่นั่งหลายมุม สถานที่สะอาด</p>
+                </div>
+            </a>
+           
+                 <!-- การ์ดที่ 8-->
+                 <a href="8th.html" class="card">
+                    <img src="pi8.jpg" alt="8th">
+                <div class="card-content">
+                    <h3>8th</h3>
+                    <p>มีกาแฟหลากหลายตัวให้เลือก ถูกใจคอกาแฟ นอกจากกาแฟแล้วทางร้านยังมีเมนูเครื่องดื่มอื่นๆ อีกด้วย</p>
+                </div>
+            </a>
+       </div>
+
+</head>
+<body>
+   
+   
+       <!-- การ์ดที่ 9 -->
+       <div class="grid">
+        <a href="ton.html" class="card">
+            <img src="p้้hi1.jpg" alt="ร้านอาหารต้นตาล พิษณุโลก ">
+            <div class="card-content">
+                <h3>ร้านอาหารต้นตาล พิษณุโลก</h3>
+                <p>ร้านน่ารัก บรรยากาศดีสะอาดปลอดโปร่ง บริการก็ดี ราคาไม่แรง อาหารอร่อย จอดรถสะดวก</p>
+            </div>
+        </a>
+      
+       
+         <!-- การ์ดที่ 10 -->
+         <a href="f2.html" class="card">
+        <img src="phi1.jpg" alt="F2.8 Coffee Lab">
+            <div class="card-content">
+                <h3>F2.8 Coffee Lab</h3>
+                <p>ร้านสไตล์อิฐแดง หน้าร้านสวยถ่ายรูปได้ ในร้านกว้างนั่งสบาย มีเมนูให้เลือกเยอะมากราคาดีย์ พนักงานน่ารักมากๆ </p>
+            </div>
+        </a>
+        
+        
+         <!-- การ์ดที่ 11 -->
+         <a href="penang.html" class="card">
+            <img src="phi3.jpg" alt="Penang Steakhouse ร้านปีนังสเต็ก">
+            <div class="card-content">
+                <h3>Penang Steakhouse ร้านปีนังสเต็ก</h3>
+                <p>ร้านนี้เป็นสไตล์ร้านอาหารฟิวชั่น มีครบทั้งอาหารไทย สไตล์ตะวันตก มีพาสต้า สเต๊ก ที่มีเนื้อให้เลือกเยอะ</p>
+        </div>
+    </a>
+        
+        
+       <!-- การ์ดที่ 12 -->
+       <a href="black.html" class="card">
+        <img src="phi6.jpg" alt="Black Ground Cafe & Dining">
+            <div class="card-content">
+                <h3>Black Ground Cafe & Dining</h3>
+                <p>บรรยากาศ/สถานที่ ตกแต่งเรียบง่ายคลุมโทนด้วยสีขาว มีมุมถ่ายรูปค่อยข้างเยอะ มีเมนูให้เลือกมากมาย แถมมีน้องเด็กเอ็นขนฟูๆคอยต้อนรับอีกด้วย</p>
+            </div>
+        </a>
+    </div>
+
+</body>
+</html>
+
+    
