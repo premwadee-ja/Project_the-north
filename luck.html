@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -27,140 +28,47 @@
    <style>
       body {
             font-family: Arial, sans-serif;
+            text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #ffffff;
+            background-color: #f9f9f9;
         }
-
-        .container {
-            max-width: 1200px;
+       
+		.container {
+            max-width: 800px;
             margin: auto;
             padding: 20px;
-            text-align: center;
         }
-
-        h2 {
-            font-size: 32px;
-            color: hsl(0, 1%, 35%);
-            position: relative;
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+           
             display: inline-block;
+            padding-bottom: 5px;
         }
-
-        h2:before, h2:after {
-            content: "";
-            position: absolute;
-            width: 50px;
-            height: 2px;
-            background-color: #e67e22;
-            top: 50%;
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 20px auto;
         }
-
-        h2:before {
-            left: -60px;
-        }
-
-        h2:after {
-            right: -60px;
-        }
-
-        .grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-
-        .card {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgb(129, 128, 128);
-            overflow: hidden;
-            width: 23%;
-            margin-bottom: 20px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-        }
-
-        .card img {
+        .image-gallery img {
             width: 100%;
-            height: 180px;
-            object-fit: cover;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
-        .card-content {
-            padding: 15px;
-            text-align: left;
+        .text-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
-       .card h3 {
-    font-size: 16px; 
-    font-weight: bold;
-    color: #e67e22; /* สีส้ม */
-    margin-bottom: 5px;
-}
-
-      .card p {
-    font-size: 14px; 
-    color: #777;
-}
-    
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* บังคับให้มี 4 คอลัมน์ต่อบรรทัด */
-    gap: 20px;
-    padding: 20px;
-}
-
-.card {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* เงาใต้การ์ด */
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card img {
-    width: 100%;
-    height: 200px; /* ปรับความสูงของรูปให้เท่ากัน */
-    object-fit: cover;
-}
-
-.card-content {
-    padding: 20px;
-    text-align: left;
-    background: white;
-}
-
-.card h3 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #e67e22; /* สีส้ม */
-    margin-bottom: 10px;
-}
-
-.card p {
-    font-size: 16px;
-    color: #777;
-}
-
-
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>ครัวเจ๊โชค</h1>
+        <h1>ครัวเจ๊โชค </h1>
         <div class="image-gallery">
             <img src="luck1.jpg" alt="บรรยากาศร้าน">
             <img src="luck2.jpg" alt="อาหารจานเด็ด">
@@ -169,11 +77,11 @@
         </div>
         <div class="text-content">
             <p>“ร้านอาหารพิษณุโลกชื่อดังได้รับรางวัลการันตีจาก Wongnai อาหารรสชาติดี ขนาดจานและปริมาณของอาหารแต่ละจานก็กำลังพอดี เมนูที่สุดจากร้านอาหารในพิษณุโลกร้านนี้คือ "ฉู่ฉี่ปลาเนื้ออ่อนทอด" ราคาสมเหตุสมผล รสชาติดี” </p>
-            <p><strong>ที่อยู่:</strong> 49/4-5 ถ.สีหราชเดโชชัย อำเภอ เมืองพิษณุโลก 65000 </p>
-            <p><strong> เวลาทําการ:</strong> เปิด เวลา 10:00 - ปิด 21:00 น. </p>
-            <p><strong>เบอร์ติดต่อ:</strong> 055 334 088 </p>
+            <p><strong>ที่อยู่:</strong> 49/4-5 ถ.สีหราชเดโชชัย อำเภอ เมืองพิษณุโลก 65000  </p>
+            <p><strong> เวลาทําการ:</strong> เปิด เวลา 10:00 - ปิด 21:00 น.  </p>
+            <p><strong>เบอร์ติดต่อ:</strong> 055 334 088</p>
             <a href="mapluck.html" target="_blank">เปิดแผนที่</a>
-         <a href="phitsanulok.html" class="back-link">ย้อนกลับ</a>
+           <a href="phitsanulok.html" class="back-link">ย้อนกลับ</a>
 	</div>
     </div>
 </body>
