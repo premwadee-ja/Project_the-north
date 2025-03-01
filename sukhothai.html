@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลจังหวัด</title>
+  
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+       
+    <h1>แพลตฟอร์มดิจิทัลเพื่อส่งเสริมการท่องเที่ยวภาคเหนือตอนล่างของไทย</h1>
+    <nav>
+        <ul>
+            <li><a href="home.html">หน้าแรก</a></li>
+            <li><a href="About.html">ข้อมูลจังหวัด</a></li>
+            <li><a href="infor.html">แหล่งท่องเที่ยว</a></li>
+            <li><a href="infor.html">คาเฟ่/ร้านอาหาร</a></li>
+            <li><a href="in.html">แหล่งร้านฝากขาย</a></li>
+        
+        </ul>
+    </nav>
+    </header>
+  
+  
+  
+  <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 32px;
+            color: hsl(0, 1%, 35%);
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::before, h2::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: #e67e22;
+            top: 50%;
+        }
+
+        h2::before { left: -60px; }
+        h2::after { right: -60px; }
+
+      .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 คอลัมน์ */
+    grid-template-rows: repeat(4, auto); /* 4 แถว */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    text-decoration: none; /* เอาขีดเส้นใต้ลิงก์ออก */
+    color: inherit; /* ใช้สีปกติของข้อความ */
+    display: block; /* ทำให้ลิงก์คลุมทั้งการ์ด */
+}
+
+.card h3, .card p {
+    color: inherit; /* ใช้สีข้อความเดิม */
+}
+
+.card:visited, .card:active, .card:hover {
+    color: inherit; /* ป้องกันสีเปลี่ยนเมื่อคลิก */
+    text-decoration: none;
+}
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(129, 128, 128, 0.5);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 20px;
+        }
+
+        .card:hover { transform: scale(1.05); }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+            text-align: left;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            color: #e67e22;
+            margin: 10px 0;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>ข้อมูลจังหวัดสุโขทัย</h2>
+       
+          <!-- การ์ดที่ 1 -->
+        <div class="grid">
+            <a href="wood.html" class="card">
+                <img src="suk1.jpg" alt="ร้าน ไม้กลางกรุง">
+                <div class="card-content">
+                    <h3>ร้าน ไม้กลางกรุง</h3>
+                    <p> ไม้กลางกรุง ร้านอาหารอร่อยๆ ในตัวเมืองสุโขทัย อาหารอร่อย เมนูหลากหลาย บรรยากาศสบายๆ ใครมาเที่ยวสุโขทัยแนะนำให้มาลองกัน</p>
+                </div>
+            </a>
+           
+             <!-- การ์ดที่ 2 -->
+        <a href="tapui.html" class="card">
+            <img src="suk2.jpg" alt="ก๋วยเตี๋ยวสุโขทัยตาปุ้ย">
+                <div class="card-content">
+                    <h3>ก๋วยเตี๋ยวสุโขทัยตาปุ้ย</h3>
+                    <p>เมนูเด่น ก๋วยเตี๋ยวสุโขทัย ห้ามพลาด เมนูเด่น ก๋วยเตี๋ยวสุโขทัย</p>
+                </div>
+            </a>
+          
+          
+            <!-- การ์ดที่ 3 -->
+            <a href="sukho.html" class="card">
+                <img src="suk3.jpg" alt="ครัวสุโข สนามบินสุโขทัย">
+                <div class="card-content">
+                    <h3>ครัวสุโข สนามบินสุโขทัย</h3>
+                    <p>จุดเด่นของร้านอยู่ที่นำพืชผักมาดัดแปลงเป็นเมนูต่างๆ และผักสวนครัวที่นี่ปลูกเองเป็นส่วนใหญ่ บรรยากาศร้านก็ชิวสบาย มีทุ่งนาเขียวๆให้มองเพลินๆ </p>
+                </div>
+            </a>
+           
+           
+             <!-- การ์ดที่ 4 -->
+             <a href="rice.html" class="card">
+                <img src="suk4.jpg" alt="ข้าวเปิ๊บยายเครื่อง">
+                <div class="card-content">
+                    <h3>ข้าวเปิ๊บยายเครื่อง</h3>
+                    <p>ร้านข้าวเปิ๊บ(ต้นตำรับ)ยายเครื่อง หนึ่งเดียวในโลก ไม่มีสาขา เปิดบริการทุกวัน 365 วัน ไม่มีวันหยุด</p>
+              
+                </div>
+            </a>
+        </div>
+       
+
+       
+</head>
+<body>
+    
+       
+    
+    
+           <!-- การ์ดที่ 5 -->
+           <div class="grid">
+            <a href="379.html" class="card">
+                <img src="suk5.jpg" alt="379 Drip">
+                <div class="card-content">
+                    <h3>379 Drip</h3>
+                    <p>ร้านกาแฟพรีเมี่ยมในบ้านไม้ บรรยากาศดี สไตล์โฮมมี่ในจังหวัดสุโขทัย </p>
+                </div>
+            </a>
+           
+           
+           
+             <!-- การ์ดที่ 6 -->
+             <a href="cafede.html" class="card">
+                <img src="suk6.jpg" alt="Cafe De Treeg">
+                <div class="card-content">
+                    <h3>Cafe De Treeg</h3>
+                    <p>ร้านคาเฟ่ที่มีบรรยากาศอบอุ่นและเป็นกันเอง การตกแต่งร้านเน้นโทนสีอบอุ่นและมีต้นไม้ประดับทั่วร้าน ทำให้รู้สึกผ่อนคลายเหมือนอยู่บ้าน</p>
+                </div>
+            </a>
+          
+          
+             <!-- การ์ดที่ 7 -->
+             <a href="balcony.html" class="card">
+                <img src="suk7.jpg" alt="ระเบียงกาแฟ สวรรคโลก">
+                <div class="card-content">
+                    <h3>ระเบียงกาแฟ สวรรคโลก</h3>
+                    <p>ร้านกาแฟสไตล์ไทยล้านนา มีระเบียงให้นั่งชมวิวกันแบบชิวๆ นั่งมองทุ่งนาสีเขียว</p>
+                </div>
+            </a>
+           
+           
+          
+            <!-- การ์ดที่ 8 -->
+            <a href="ten.html" class="card">
+                <img src="suk8.jpg" alt="สิบสองหน่วยตัด">
+                <div class="card-content">
+                    <h3>สิบสองหน่วยตัด</h3>
+                    <p>ป็นทั้งคาเฟ่+ร้านอาหาร+ที่พัก บรรยากาศแบบย้อนยุค เรือนริมน้ำ อาหารไทย สวนหลังบ้านสวยๆ </p>
+                </div>
+            </a>
+       </div>
+
+</head>
+<body>
+   
+   
+      <!-- การ์ดที่ 9 -->
+      <div class="grid">
+        <a href="parksukhothai.html" class="card">
+            <img src="suk9.jpg" alt="อุทยานประวัติศาสตร์สุโขทัย">
+            <div class="card-content">
+                <h3>อุทยานประวัติศาสตร์สุโขทัย</h3>
+                <p> เป็นอุทยานประวัติศาสตร์แห่งหนึ่งของประเทศไทยภายใต้การดูแลของกรมศิลปากร กระทรวงวัฒนธรรม  </p>
+            </div>
+        </a>
+       
+       
+       <!-- การ์ดที่ 10 -->
+       <a href="project.html" class="card">
+        <img src="suk10.jpg" alt="โครงการเกษตรอินทรีย์สนามบินสุโขทัย">
+            <div class="card-content">
+                <h3>โครงการเกษตรอินทรีย์สนามบินสุโขทัย</h3>
+                <p>โครงการเกษตรอินทรีย์ นับเป็นแหล่งท่องเที่ยวเชิงองค์ความรู้ เนื่องจากตั้งอยู่ในพื้นที่ของสนามบิน จึงเดินทางมาได้ง่าย เปิดให้เข้าชมได้หลายโซน เช่น โรงสีข้าว, แปลงนาปู่ย่าตายาย </p>
+            </div>
+        </a>
+      
+      
+        <!-- การ์ดที่ 11 -->
+        <a href="homena.html" class="card">
+            <img src="suk11.jpg" alt="บ้านนาต้นจั่น">
+            <div class="card-content">
+                <h3>บ้านนาต้นจั่น</h3>
+                <p>ที่นี่เป็นชุมชนท่องเที่ยวที่มีโฮมสเตย์มากกว่า 30 หลังและทุกหลังราคาเท่ากัน 1,000 บาทต่อหลัง</p>
+            </div>
+        </a>
+        
+        
+        <!-- การ์ดที่ 12 -->
+        <a href="museum.html" class="card">
+            <img src="suk12.jpg" alt="พิพิธภัณฑสถานแห่งชาติ">
+            <div class="card-content">
+                <h3>พิพิธภัณฑสถานแห่งชาติ</h3>
+                <p>ทางพิพิธภัณฑ์ได้จัดแสดงออกเป็น 2 ส่วน ได้แก่ ชั้นบน จัดแสดงประติมากรรมสมัยต่าง ๆ ส่วนบริเวณ ชั้นล่าง จัดแสดงเครื่องถ้วยสังคโลก เพื่อประโยชน์ในการศึกษาหาความรู้</p>
+            </div>
+        </a>
+</div>
+
+</body>
+</html>
+
