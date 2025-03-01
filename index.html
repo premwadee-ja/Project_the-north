@@ -170,7 +170,8 @@
     <!-- Search Box Section -->
     <div class="search-container">
         <input type="text" id="search-input" placeholder="พิมพ์ชื่อจังหวัด...">
-    <button onclick="searchProvince()">ค้นหา</button>
+         <input type="text" id="search-input" placeholder="ค้นหาจังหวัด">
+        <button onclick="searchProvince()">ค้นหา</button>
 
     </div>
 
@@ -208,9 +209,12 @@
             img.src = imageList[(currentIndex + direction + imageList.length) % imageList.length];
         }
 
-     function searchProvince() {
+    function searchProvince() {
     let input = document.getElementById("search-input").value.trim();
-    input = input.replace(/\s+/g, ''); // ลบช่องว่างทั้งหมด
+    input = input.normalize("NFC").replace(/\s+/g, ""); // ลบช่องว่างและอักขระแปลกๆ
+    
+    console.log("ค่าที่พิมพ์:", input);
+
     let provinces = {
         "สุโขทัย": "sukhothai.html",
         "อุตรดิตถ์": "uttaradit.html",
@@ -222,15 +226,17 @@
         "นครสวรรค์": "nakhonsawan.html"
     };
 
-    console.log("ค่าที่พิมพ์:", input); // เช็กค่าที่พิมพ์
-    console.log("จังหวัดที่มีในระบบ:", Object.keys(provinces)); // ดูว่ามีจังหวัดไหนบ้าง
+    console.log("จังหวัดในระบบ:", Object.keys(provinces));
 
-    if (provinces[input]) {
+    if (provinces.hasOwnProperty(input)) {
+        console.log("พบจังหวัด:", input);
         window.location.href = provinces[input];
     } else {
+        console.log("ไม่พบจังหวัด:", input);
         alert("ไม่พบข้อมูลจังหวัดที่ต้องการ");
     }
 }
+
 
 
 document.getElementById("search-btn").addEventListener("click", searchProvince);
