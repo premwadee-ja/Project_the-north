@@ -62,7 +62,8 @@
             background-image: url('test1.png');
         }
 
-         @media (max-width: 1024px) {
+        
+        @media (max-width: 1024px) {
             .hero-image {
                 height: 400px;
                 background-size: contain;
@@ -121,6 +122,7 @@
             gap: 10px;
         }
 
+        /* Image Frame and Slideshow */
         .frame {
             position: relative;
             border: 5px solid white;
@@ -139,6 +141,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: opacity 2s ease-in-out;
         }
 
         .arrow {
@@ -205,17 +208,20 @@
     </div>
 
     <script>
-        const images = ['test1.png', 'test2.png', 'test3.png', 'test4.png', 'test5.png','test6.png','test7.png','test8.png'];
-        let currentIndex = 0;
-        const heroSection = document.getElementById('hero');
+        document.addEventListener("DOMContentLoaded", function() {
+            let images = ["test1.png", "test2.png", "test3.png", "test4.png", "test5.png", "test6.png", "test7.png", "test8.png"];
+            let index = 0;
+            let frame = document.querySelector(".frame img");
 
-        function changeBackground() {
-            heroSection.style.backgroundImage = `url('${images[currentIndex]}')`;
-            currentIndex = (currentIndex + 1) % images.length;
-            setTimeout(changeBackground, 5000);
-        }
-        window.addEventListener("load", changeBackground);
-
+            setInterval(() => {
+                index = (index + 1) % images.length;
+                frame.style.opacity = 0;
+                setTimeout(() => {
+                    frame.src = images[index];
+                    frame.style.opacity = 1;
+                }, 2000); // ดีเลย์เปลี่ยนรูป 2 วินาที
+            }, 5000); // สไลด์ทุก 5 วินาที
+        });
         // เปลี่ยนรูปภาพในกรอบ
         const imageList = ['t1.jpg', 't2.jpg', 't3.jpg', 't4.jpg'];
         function changeImage(frame, direction) {
