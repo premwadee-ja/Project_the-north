@@ -47,8 +47,7 @@
             text-decoration: none;
             font-size: 1.1em;
         }
-
-        /* Hero Image Section - Slideshow */
+ /* Hero Image Section - Slideshow */
         .hero-image {
             position: relative;
             width: 100vw;
@@ -58,8 +57,9 @@
             align-items: center;
             background-size: cover;
             background-position: center;
+            transition: background-image 3s ease-in-out;
+            background-image: url('test1.png');
         }
-
         
         @media (max-width: 1024px) {
             .hero-image {
@@ -206,15 +206,20 @@
     </div>
 
       <script>
-       document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function() {
             let images = ["test1.png", "test2.png", "test3.png", "test4.png", "test5.png", "test6.png", "test7.png", "test8.png"];
             let index = 0;
             let heroImage = document.querySelector(".hero-image");
 
             function changeImage() {
-                heroImage.style.backgroundImage = `url('${images[index]}')`;
-                index = (index + 1) % images.length;
-                requestAnimationFrame(changeImage);
+                heroImage.classList.add("fade-out");
+                setTimeout(() => {
+                    heroImage.style.backgroundImage = `url('${images[index]}')`;
+                    index = (index + 1) % images.length;
+                    heroImage.classList.remove("fade-out");
+                    heroImage.classList.add("fade-in");
+                }, 2000); // เอฟเฟกต์ fade-out ใช้เวลา 2 วินาที
+                setTimeout(changeImage, 8000); // เปลี่ยนภาพทุก 8 วินาที ไม่มีดีเลย์
             }
             changeImage();
         });
