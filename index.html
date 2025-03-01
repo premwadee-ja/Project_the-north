@@ -210,34 +210,36 @@
         }
 
     function searchProvince() {
-    let input = document.getElementById("search-input").value.trim();
-    input = input.normalize("NFC").replace(/\s+/g, ""); // ลบช่องว่างและอักขระแปลกๆ
-    
-    console.log("ค่าที่พิมพ์:", input);
+            let input = document.getElementById("search-input").value.trim();
 
-    let provinces = {
-        "สุโขทัย": "sukhothai.html",
-        "อุตรดิตถ์": "uttaradit.html",
-        "พิษณุโลก": "phitsanulok.html",
-        "พิจิตร": "phichit.html",
-        "ตาก": "tak.html",
-        "กำแพงเพชร": "kamphaengphet.html",
-        "เพชรบูรณ์": "phetchabun.html",
-        "นครสวรรค์": "nakhonsawan.html"
-    };
+            // ✅ ลบช่องว่างทั้งหมดและจัดรูปแบบให้ถูกต้อง
+            input = input.normalize("NFC").replace(/\s+/g, "");
 
-    console.log("จังหวัดในระบบ:", Object.keys(provinces));
+            // ✅ กำหนดจังหวัดที่มีในระบบ
+            let provinces = {
+                "สุโขทัย": "sukhothai.html",
+                "อุตรดิตถ์": "uttaradit.html",
+                "พิษณุโลก": "phitsanulok.html",
+                "พิจิตร": "phichit.html",
+                "ตาก": "tak.html",
+                "กำแพงเพชร": "kamphaengphet.html",
+                "เพชรบูรณ์": "phetchabun.html",
+                "นครสวรรค์": "nakhonsawan.html"
+            };
 
-    if (provinces.hasOwnProperty(input)) {
-        console.log("พบจังหวัด:", input);
-        window.location.href = provinces[input];
-    } else {
-        console.log("ไม่พบจังหวัด:", input);
-        alert("ไม่พบข้อมูลจังหวัดที่ต้องการ");
-    }
-}
+            // ✅ ตรวจสอบค่าที่พิมพ์และจังหวัดที่มี
+            console.log("ค่าที่พิมพ์:", input);
+            console.log("จังหวัดในระบบ:", Object.keys(provinces));
 
-
+            // ✅ เช็กว่ามีจังหวัดในระบบหรือไม่
+            if (provinces[input]) {
+                console.log("พบจังหวัด:", input);
+                window.location.href = provinces[input];
+            } else {
+                console.log("ไม่พบจังหวัด:", input);
+                alert("ไม่พบข้อมูลจังหวัดที่ต้องการ");
+            }
+        }
 
 document.getElementById("search-btn").addEventListener("click", searchProvince);
 document.getElementById("search-input").addEventListener("keypress", function(event) {
