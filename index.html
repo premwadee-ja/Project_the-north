@@ -135,21 +135,32 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4); /* พื้นหลังโปร่งแสง */
     color: white;
     border: none;
-    padding: 10px;
+    padding: 10px 15px;
     cursor: pointer;
     z-index: 10;
-    transition: background 0.3s;
+    border-radius: 5px; /* ทำให้ปุ่มมีมุมมน */
+    transition: background 0.3s, opacity 0.3s;
+    opacity: 0.8; /* ความโปร่งใส */
 }
 
+/* เอฟเฟกต์เมื่อโฮเวอร์ปุ่ม */
 .arrow:hover {
     background: rgba(0, 0, 0, 0.8);
+    opacity: 1;
 }
 
-.prev { left: 5px; }
-.next { right: 5px; }
+/* ปุ่มด้านซ้าย */
+.prev {
+    left: 10px;
+}
+
+/* ปุ่มด้านขวา */
+.next {
+    right: 10px;
+}
 
     </style>       
 </head>
