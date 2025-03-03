@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แผนที่อุทยานประวัติศาสตร์สุโขทัย</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.12/leaflet-routing-machine.min.js"></script>
+    <style>
+        #map { height: 700px; width: 100%; }
+
+        /* ปรับแต่งกรอบข้อความในป๊อปอัพ */
+        .leaflet-popup-content {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #ff6f61; /* สีพื้นหลังสดใส */
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); /* เงาให้กรอบ */
+        }
+
+        /* ปรับแต่งปุ่มในกรอบ */
+        .leaflet-popup-content button {
+            background-color: #ffffff;
+            color: #ff6f61;
+            border: 2px solid #ff6f61;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .leaflet-popup-content button:hover {
+            background-color: #ff6f61;
+            color: white;
+            border: 2px solid #ffffff;
+        }
+
+        /* ปรับแต่งเส้นทางให้เด่นชัด */
+        .leaflet-routing-container {
+            background-color: rgba(255, 255, 255, 0.7); /* ขาวใสเพื่อไม่ให้กลมกลืน */
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* เงา */
+            padding: 15px;
+        }
+
+        .leaflet-routing-container .leaflet-routing-waypoint {
+            background-color: #ff6f61; /* จุดเริ่มต้นและจุดปลาย */
+        }
+
+        .leaflet-routing-container .leaflet-routing-waypoint .leaflet-routing-icon {
+            background-color: #ff6f61; /* เปลี่ยนสีไอคอนให้เป็นสีเด่น */
+        }
+    </style>
+</head>
+<body>
+    <h2>แผนที่อุทยานประวัติศาสตร์สุโขทัย</h2>
+    <div id="map"></div>
+    
+    <script>
+        var map = L.map('map').setView([16.8761, 99.1456], 12); // ซูมระดับ 12 เพื่อแสดงพื้นที่กว้างขึ้น
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        var userMarker;
+        var routingControl;
+
+        // ปักหมุดร้านวันเดย์ วันคาเฟ่
+        var restaurant = {
+            name: "อุทยานประวัติศาสตร์สุโขทัย",
+            lat: 17.0076,
+            lon:  99.7966
+        };
+
+        var restaurantMarker = L.marker([restaurant.lat, restaurant.lon]).addTo(map)
+            .bindPopup("<b>" + restaurant.name + "</b><br><button onclick='navigateTo(" + restaurant.lat + ", " + restaurant.lon + ")'>ไปที่นี่</button>");
+
+        // ขอพิกัดผู้ใช้
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var userLat = position.coords.latitude;
+                var userLon = position.coords.longitude;
+
+                userMarker = L.marker([userLat, userLon], { icon: L.icon({
+                    iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
+                    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png'
+                }) }).addTo(map)
+                    .bindPopup("<b>ตำแหน่งของคุณ</b>").openPopup();
+
+                // ใช้ fitBounds เพื่อปรับแผนที่ให้แสดงทั้งสองหมุด
+                map.fitBounds([ [userLat, userLon], [restaurant.lat, restaurant.lon] ]);
+            }, function(error) {
+                alert("ไม่สามารถดึงตำแหน่งของคุณได้: " + error.message);
+            });
+        } else {
+            alert("เบราว์เซอร์ของคุณไม่รองรับการระบุตำแหน่ง");
+        }
+
+        function navigateTo(destLat, destLon) {
+            if (!userMarker) {
+                alert("กรุณาอนุญาตให้เข้าถึงตำแหน่งของคุณก่อน");
+                return;
+            }
+            if (routingControl) {
+                map.removeControl(routingControl);
+            }
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var userLat = position.coords.latitude;
+                var userLon = position.coords.longitude;
+                routingControl = L.Routing.control({
+                    waypoints: [
+                        L.latLng(userLat, userLon),
+                        L.latLng(destLat, destLon)
+                    ],
+                    routeWhileDragging: true,
+                    routeDragInterval: 100,
+                    createMarker: function() { return null; } // ซ่อนไอคอนของเส้นทาง
+                }).addTo(map);
+            });
+        }
+    </script>
+</body>
+</html>
