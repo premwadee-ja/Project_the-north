@@ -107,9 +107,9 @@
 }
 
 .frame {
-    position: relative; /* ทำให้ปุ่มอยู่ในตำแหน่งสัมพันธ์กับ .frame */
-    width: 180px;
-    height: 220px;
+    position: relative;
+    width: 220px; /* ปรับขนาดกรอบให้ใหญ่ขึ้น */
+    height: 280px; /* ปรับความสูงให้ใหญ่ขึ้น */
     border: 5px solid white;
     padding: 5px;
     background: rgba(255, 255, 255, 0.5);
@@ -117,8 +117,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow: hidden; /* ป้องกันภาพเกินออกจากกรอบ */
 }
+
+.frame img {
+    width: 100%;  /* ขยายให้เต็มกรอบ */
+    height: 100%; /* ปรับให้พอดีกับความสูงของกรอบ */
+    object-fit: cover; /* ทำให้ภาพพอดีกับกรอบโดยไม่เสียอัตราส่วน */
+}
+
 
 .arrow {
     background: none;  /* เอาพื้นหลังออก */
