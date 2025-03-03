@@ -110,15 +110,16 @@
             background-color: #5c7854;
         }
 
-        /* Image Overlay Section */
-        .image-overlay {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
+       .image-overlay {
+    position: absolute;
+    top: 50%;
+    right: 20px; /* Ensures the images stay on the right side */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Increases space between the images */
+    align-items: flex-end; /* Aligns images properly to the right */
+}
 
         /* Image Frame and Slideshow */
         .frame {
