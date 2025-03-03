@@ -96,20 +96,18 @@
             background-color: #5c7854;
         }
 
-   /* Image Overlay Section */
+/* Image Overlay Section */
 .image-overlay {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(130%) translateY(-50%);
+    top: 62%;
+    right: 10%;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-
-
-        .frame {
+/* กรอบรูป */
+.frame {
     width: 150px;
     height: 180px;
     border: 5px solid white;
@@ -118,30 +116,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     overflow: hidden;
 }
 
+/* ปรับขนาดของภาพให้เต็มกรอบ */
+.frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
 
-        .frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+/* ปุ่มเลื่อนภาพ */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
 
-        .arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            z-index: 10;
-        }
-
-        .prev { left: 5px; }
-        .next { right: 5px; }
+.prev { left: 5px; }
+.next { right: 5px; }
 
     </style>       
 </head>
@@ -176,19 +177,20 @@
         <button onclick="searchProvince()">ค้นหา</button>
   
 
-    <!-- Image Overlay Section -->
-    <div class="image-overlay">
-        <div class="frame">
-            <button class="arrow prev" onclick="changeImage(this.parentElement, -1)">❮</button>
-            <img src="t1.jpg" alt="Temple">
-            <button class="arrow next" onclick="changeImage(this.parentElement, 1)">❯</button>
-        </div>
-        <div class="frame">
-            <button class="arrow prev" onclick="changeImage(this.parentElement, -1)">❮</button>
-            <img src="t4.jpg" alt="Pagoda">
-            <button class="arrow next" onclick="changeImage(this.parentElement, 1)">❯</button>
-        </div>
+   <!-- Image Overlay Section -->
+<div class="image-overlay">
+    <div class="frame">
+        <button class="arrow prev" onclick="changeImage(this, -1)">❮</button>
+        <img src="t1.jpg" alt="Image 1">
+        <button class="arrow next" onclick="changeImage(this, 1)">❯</button>
     </div>
+    <div class="frame">
+        <button class="arrow prev" onclick="changeImage(this, -1)">❮</button>
+        <img src="t4.jpg" alt="Image 2">
+        <button class="arrow next" onclick="changeImage(this, 1)">❯</button>
+    </div>
+</div>
+
 
       <script>
         document.addEventListener("DOMContentLoaded", function() {
