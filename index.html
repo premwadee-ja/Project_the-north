@@ -198,7 +198,19 @@
             <button class="btn next" onclick="nextSlide(1)">❯</button>
         </div>
     </div>
-
+ <script>
+        let index = [0, 0];
+        function nextSlide(sliderIndex) {
+            let slider = document.getElementById("slider" + sliderIndex);
+            index[sliderIndex] = (index[sliderIndex] + 1) % 2;
+            slider.style.transform = `translateX(-${index[sliderIndex] * 100}%)`;
+        }
+        function prevSlide(sliderIndex) {
+            let slider = document.getElementById("slider" + sliderIndex);
+            index[sliderIndex] = (index[sliderIndex] - 1 + 2) % 2;
+            slider.style.transform = `translateX(-${index[sliderIndex] * 100}%)`;
+        }
+    </script>
 
       <script>
         document.addEventListener("DOMContentLoaded", function() {
