@@ -18,14 +18,33 @@
             font-style: italic;
         }
 
-        /* Navigation Bar */
-        .nav-container {
-            background-color: #5c7854;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+      .navbar {
+    display: flex; /* ทำให้เมนูเรียงในแนวนอน */
+    justify-content: center; /* จัดให้อยู่ตรงกลางของแถบเมนู */
+    align-items: center;
+    list-style: none; /* ลบจุดหน้ารายการเมนู */
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    display: inline-block; /* ทำให้แต่ละเมนูแสดงเป็นแนวนอน */
+    margin: 0 15px; /* กำหนดระยะห่างระหว่างเมนู */
+}
+
+.navbar a {
+    text-decoration: none; /* เอาเส้นใต้ของลิงก์ออก */
+    color: white; /* เปลี่ยนสีตัวอักษร */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px; /* เพิ่มพื้นที่รอบข้อความ */
+    transition: 0.3s; /* ทำให้การเปลี่ยนสีเมนูลื่นไหล */
+}
+
+.navbar a:hover {
+    color: #FFD700; /* เปลี่ยนสีเมื่อเอาเมาส์ไปชี้ */
+}
+
 
         .logo {
     color: white;
