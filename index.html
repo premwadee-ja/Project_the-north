@@ -107,9 +107,6 @@
         }
 
         .frame {
-            .parent-container {
-    display: flex;
-    justify-content: flex-end;
                 
             position: relative;
             border: 5px solid white;
@@ -124,7 +121,26 @@
             overflow: hidden;
         }
 
-        .frame img {
+     .parent-container {
+    display: flex;
+    justify-content: flex-end; /* จัดให้อยู่ฝั่งขวา */
+    align-items: center;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column; /* ให้ภาพเรียงกันในแนวตั้ง */
+    gap: 10px; /* เพิ่มระยะห่างระหว่างภาพ */
+}
+
+.image-container img {
+    width: 150px; /* ปรับให้ไม่ใหญ่เกินไป */
+    height: auto;
+    border-radius: 10px; /* เพิ่มความโค้งมน */
+}
+
+       
+       .frame img {
             width: 100%;
             height: 100%;
             object-fit: cover;
