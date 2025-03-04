@@ -115,16 +115,17 @@
 .carousel-button:hover {
     background-color: #45a049; /* เปลี่ยนสีเมื่อ hover */
 }
+.image-overlay {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    width: 100%; /* ให้ div ครอบพื้นที่ทั้งหมด */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end; /* ทำให้รูปอยู่ทางขวาสุด */
+}
 
-       /* Image Overlay Section */
-        .image-overlay {
-            position: absolute;
-            bottom: 20px;
-           right: 0px; /* เปลี่ยนจาก 20px เป็น 50px หรือค่าที่ต้องการให้ชิดขวา */
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
 
         .frame {
                 
