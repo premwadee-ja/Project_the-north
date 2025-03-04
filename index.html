@@ -203,22 +203,15 @@ nav ul li a {
         height: 40vh;
     }
 
-   .search-container {
-    text-align: center; /* จัดกึ่งกลาง */
-}
-
-.search-hint {
-    margin-top: 10px; /* ระยะห่างจากปุ่มค้นหา */
-    padding: 10px;
-    border: 2px solid #ffa500; /* สีขอบ */
-    border-radius: 10px; /* ทำมุมโค้ง */
-    background-color: #fffaf0; /* สีพื้นหลัง */
-    color: #333; /* สีตัวอักษร */
-    font-size: 14px;
-    max-width: 400px; /* จำกัดความกว้าง */
-    margin-left: auto;
-    margin-right: auto;
-}
+     /* Search Box */
+        .search-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+            width: 700px;
+        }
 
 	
     .search-container input {
@@ -268,20 +261,8 @@ nav ul li a {
     <div class="search-container">
       
         <div class="search-container">
-    <input type="text" placeholder="ค้นหาจังหวัด">
+    <input type="text" placeholder="ค้นหาภาคเหนือตอนล่างได้ 8 จังหวัด">
     <button class="search-button">ค้นหา</button>
-
-    <!-- กรอบข้อความคำแนะนำ -->
-    <div class="search-hint">
-        กรุณากรอกชื่อจังหวัดเพื่อค้นหาสถานที่ท่องเที่ยว
-    </div>
-</div>
-
-
-<!-- กรอบข้อความคำแนะนำ -->
-<div class="search-hint">
-  *หมายเหตุ* สามารถค้นหาภาคเหนือตอนล่างได้ 8 จังหวัด
-</div>
 
 	    
 <div class="frame-container">
