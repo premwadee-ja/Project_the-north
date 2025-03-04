@@ -107,6 +107,10 @@
         }
 
         .frame {
+            .parent-container {
+    display: flex;
+    justify-content: flex-end;
+                
             position: relative;
             border: 5px solid white;
             padding: 5px;
@@ -175,8 +179,8 @@
   
 
   <!-- Image Overlay Section -->
-    <div class="image-overlay">
-        <div class="frame">
+ <div class="parent-container">
+    <div class="image-container">
             <button class="arrow prev" onclick="changeImage(this.parentElement, -1)">❮</button>
             <img src="t1.jpg" alt="Temple">
             <button class="arrow next" onclick="changeImage(this.parentElement, 1)">❯</button>
