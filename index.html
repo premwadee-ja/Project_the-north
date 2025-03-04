@@ -96,69 +96,6 @@
         }
 
 
-       .carousel-button {
-    background-color: #4CAF50; /* สีปุ่ม */
-    color: white; /* สีของไอคอน */
-    width: 20px; /* ลดขนาดปุ่ม */
-    height: 25px;
-    font-size: 14px; /* ปรับขนาดไอคอนให้เหมาะสม */
-    border-radius: 20%; /* ทำให้เป็นปุ่มกลม */
-    border: none;
-    padding: 3px; /* ลด Padding ให้กรอบปุ่มเล็กลง */
-    margin: 2px; /* ลดระยะห่างระหว่างปุ่มกับองค์ประกอบอื่น */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.carousel-button:hover {
-    background-color: #45a049; /* เปลี่ยนสีเมื่อ hover */
-}
-.image-overlay {
-    position: absolute;
-    bottom: 20px;
-    right: 0;  /* บังคับให้อยู่ขวาสุด */
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-end;  /* จัดให้องค์ประกอบชิดขวา */
-    width: 100%;  /* ทำให้ div ครอบพื้นที่ทั้งหมด */
-    justify-content: flex-end;  /* บังคับให้เนื้อหาอยู่ขวาสุด */
-}
-
-
-.image-container {
-    position: absolute;
-    bottom: 20px;
-    right: 0;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end; /* บังคับให้ `.image-overlay` อยู่ขวาสุด */
-}
-
-.image-overlay {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-end;
-}
-
-        .arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            z-index: 10;
-        }
-
-        .prev { left: 5px; }
-        .next { right: 5px; }
-
     </style>       
 </head>
 <body>
@@ -191,20 +128,6 @@
          <input type="text" id="search-input" placeholder="ค้นหาจังหวัด">
         <button onclick="searchProvince()">ค้นหา</button>
   
-<div class="image-container">
-    <div class="image-overlay">
-        <div class="frame">
-            <button class="arrow prev" onclick="changeImage(this.parentElement, -1)">❮</button>
-            <img src="t1.jpg" alt="Temple">
-            <button class="arrow next" onclick="changeImage(this.parentElement, 1)">❯</button>
-        </div>
-        <div class="frame">
-            <button class="arrow prev" onclick="changeImage(this.parentElement, -1)">❮</button>
-            <img src="t4.jpg" alt="Pagoda">
-            <button class="arrow next" onclick="changeImage(this.parentElement, 1)">❯</button>
-        </div>
-    </div>
-</div>
 
 
 
