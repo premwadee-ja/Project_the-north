@@ -95,62 +95,6 @@
         .search-container button:hover {
             background-color: #5c7854;
         }
-.image-overlay {
-    position: absolute;
-    bottom: 5px;  /* ปรับตำแหน่งไปขอบล่าง */
-    right: 5px;   /* ปรับตำแหน่งไปขอบขวา */
-    display: flex;
-    flex-direction: column; /* เรียงกรอบแนวตั้ง */
-    gap: 10px;  /* ระยะห่างระหว่างกรอบ */
-}
-
-
-.frame {
-    position: relative;
-    width: 220px; /* ปรับขนาดกรอบให้ใหญ่ขึ้น */
-    height: 280px; /* ปรับความสูงให้ใหญ่ขึ้น */
-    border: 5px solid white;
-    padding: 5px;
-    background: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* ป้องกันภาพเกินออกจากกรอบ */
-}
-
-.frame img {
-    width: 100%;  /* ขยายให้เต็มกรอบ */
-    height: 100%; /* ปรับให้พอดีกับความสูงของกรอบ */
-    object-fit: cover; /* ทำให้ภาพพอดีกับกรอบโดยไม่เสียอัตราส่วน */
-}
-
-
-.arrow {
-    background: none;  /* เอาพื้นหลังออก */
-    color: white; /* เปลี่ยนสีตัวอักษรให้เป็นสีขาว */
-    border: none; /* ไม่มีเส้นขอบ */
-    font-size: 14px; /* ปรับขนาดตัวอักษรให้เล็กลง */
-    cursor: pointer; /* ทำให้เป็นปุ่มกดได้ */
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    padding: 5px; /* ลดขนาดพื้นที่ของปุ่ม */
-    opacity: 0.7; /* ทำให้ปุ่มดูโปร่งแสงเล็กน้อย */
-}
-
-.arrow:hover {
-    opacity: 1; /* ทำให้ปุ่มมองเห็นชัดขึ้นเมื่อเอาเมาส์ไปวาง */
-}
-
-.prev { 
-    left: 5px; /* ปรับให้อยู่ฝั่งซ้ายของรูป */
-}
-
-.next { 
-    right: 5px; /* ปรับให้อยู่ฝั่งขวาของรูป */
-}
 
 
     </style>       
@@ -185,19 +129,7 @@
          <input type="text" id="search-input" placeholder="ค้นหาจังหวัด">
         <button onclick="searchProvince()">ค้นหา</button>
   
-<!-- Image Overlay Section -->
-<div class="image-overlay">
-    <div class="frame">
-        <button class="arrow prev" onclick="changeImage(this.parentElement, -1)">❮</button>
-        <img src="t1.jpg" alt="Temple">
-        <button class="arrow next" onclick="changeImage(this.parentElement, 1)">❯</button>
-    </div>
-    <div class="frame">
-        <button class="arrow prev" onclick="changeImage(this.parentElement, -1)">❮</button>
-        <img src="t4.jpg" alt="Pagoda">
-        <button class="arrow next" onclick="changeImage(this.parentElement, 1)">❯</button>
-    </div>
-</div>
+
 
 
 
